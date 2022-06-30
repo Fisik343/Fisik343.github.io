@@ -1,0 +1,52 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<script>
+  var form = document.querySelector("#options-form");
+  var log = document.querySelector("#log");
+
+  function processForm() {
+    console.log("test");
+    var data = new FormData(form);
+    var output = "";
+    for (const entry of data) {
+      output = entry[0] + "=" + entry[1] + "\r";
+    }
+    log.innerText = output;
+  }
+</script>
+
+<form id="option-form" action="" method="">
+  <p>What Taiji skill level do you think about this video?</p>
+  <div>
+    <input type="radio" name="skill" value="1" checked="checked" /> 1 -- Taiji
+    Beginner<br />
+    <input type="radio" name="skill" value="2" /> 2<br />
+    <input type="radio" name="skill" value="3" /> 3<br />
+    <input type="radio" name="skill" value="4" /> 4<br />
+    <input type="radio" name="skill" value="5" /> 5<br />
+    <input type="radio" name="skill" value="6" /> 6<br />
+    <input type="radio" name="skill" value="7" /> 7<br />
+    <input type="radio" name="skill" value="8" /> 8<br />
+    <input type="radio" name="skill" value="9" /> 9<br />
+    <input type="radio" name="skill" value="10" /> 10 -- Taiji Master<br />
+  </div>
+
+  <input type="submit" value="Submit" />
+  <pre id="log"></pre>
+</form>
+
+<br />
+<center>
+  <button class="button" id="options-submit" onclick="processForm()">
+    Submit
+  </button>
+</center>
+
+<script>
+  $("#option-form").submit(function (e) {
+    e.preventDefault(); // avoid to execute the actual submit of the form.
+    var form = $(this);
+
+    console.log("test");
+  });
+</script>

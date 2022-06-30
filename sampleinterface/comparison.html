@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <script src="https://assets.crowd.aws/crowd-html-elements.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <link rel="stylesheet" href="https://s3.amazonaws.com/smgtannotation/web/static/css/1.3fc3007b.chunk.css">
+    <link rel="stylesheet" href="https://s3.amazonaws.com/smgtannotation/web/static/css/main.9504782e.chunk.css">
+
+    <link rel="stylesheet" href="style.css" />
+
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <title>Local Demo</title>
+  </head>
+
+  <body>
+    <div>
+      <crowd-form id="form"> 
+        <input name="annotations" id="annotations" type="hidden">
+        <!-- Prevent crowd-form from creating its own button -->
+        <crowd-button form-action="submit" style="display: none;"></crowd-button>
+      
+
+      <div id="Taiji-instruction" class="col-12" display: inline-block;>
+        <h4 style="text-align:center">
+          Please view both videos and select the responses that best reflect your opinions.
+        </h4>
+      </div>
+
+
+      <div id="container" class="col-6" display: inline-block;>
+        <div id="spacer" class="col-1 spacer" ></div>
+        <div id="videos" class ="col-10 video-area">
+          <div id="video-1">
+            <p width="100%" style="text-align:center;" class="video-label"><strong>Performer A</strong></p>
+            <video width="100%" controls>
+              <source src="./videos/subject_7_sample_1.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          <br>
+          <div id="video-2">
+            <p width="100%" style="text-align: center;" class="video-label"><strong>Performer B</strong></p>
+            <video width="100%" controls>
+              <source src="./videos/subject_10_sample_1.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+          </div>
+        </div>
+      </div>
+      
+      <div id="options" class="col-6">
+        <crowd-instructions link-text="View instructions" link-type="button" style="text-align:center">
+          <short-summary>
+            <p>Taiji is a traditional Chinese martial arts. </p>
+            <p>Please view both videos and select the responses that best reflect your opinions.</p>
+          </short-summary>
+          <detailed-instructions>
+            <h3>TODO: </h3>
+            <p>Include additional information</p>
+          </detailed-instructions>
+          <positive-example>
+            <h3>TODO: </h3>
+            <p>Remove this tab</p>
+          </positive-example>
+          <negative-example>
+            <h3>TODO: </h3>
+            <p>Remove this tab</p>
+          </negative-example>
+        </crowd-instructions>
+        
+        <form id="option-form" action="" method="">
+          <div id="skill-question" class="col-12">
+            <div class="col-6">
+              <p>Which performer do you believe has more <strong>skill</strong> in Taiji?</p>
+              <crowd-radio-group id="skill-group" required="true"> </crowd-radio-group>
+            </div>
+            <div class="col-6">
+              <p>On a scale from 0 (not at all confident) to 10 (completely confident), how confident are you in your response to the <strong>skill</strong> question?</p>
+              <crowd-slider name="skill-confidence" min="0" max="10" step="1" pin="true" required="true"></crowd-slider>
+            </div>
+          </div>
+
+          <div id="stability-question" class="col-12">
+            <div class="col-6">
+              <p>Which performer do you believe has more <strong>physical stability</strong> while performing Taiji?</p>
+              <crowd-radio-group id="stability-group"> </crowd-radio-group>
+            </div>
+            <div class="col-6">
+              <p>On a scale from 0 (not at all confident) to 10 (completely confident), how confident are you in your response to the <strong>physical stability</strong> question?</p>
+              <crowd-slider name="stability-confidence" min="0" max="10" step="1" pin="true" required="true"></crowd-slider>
+            </div>
+          </div>
+          <br>
+          <br>
+          <crowd-button id="submitButton">Submit</crowd-button>
+        </form>
+      </div>
+
+    </crowd-form>
+    </div>
+
+    <script src="populatecomp.js"></script>
+    <script>
+      // link submit button to crowd-form submit function
+      $('#submitButton').click(function() {
+        document.querySelector('crowd-form').submit();
+      });
+    </script>
+
+  </body>
+</html>

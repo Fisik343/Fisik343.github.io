@@ -1,2 +1,3 @@
 # Fisik343.github.io
-Fisik343's website :3
+
+Hi, I'm Addison, this is my website. What will be on it? I'm not entirely sure yet. I'll figure that out when I get there.

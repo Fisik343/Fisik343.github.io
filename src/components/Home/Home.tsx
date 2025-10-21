@@ -8,7 +8,10 @@ function Home() {
         I'm Addison and this is my website! It's mostly for me to document the
         various things I've done and to also give myself a frontend sandbox to
         mess around in, but I might do something else with it at some point, who
-        knows. I probably won't make this too fancy... there are more
+        knows (I sure don't).
+      </Body>
+      <Body>
+        I probably won't make this too fancy styling-wise... there are more
         interesting things to spend my time on. I also probably won't make this
         too formal either because if I don't have at least a little bit of fun
         with this, I won't actually do it ;-;

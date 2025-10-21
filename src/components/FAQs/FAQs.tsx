@@ -1,4 +1,4 @@
-import { Body, Header, Page } from "../common";
+import { Body, Header, Page, UnderConstruction } from "../common";
 
 function FAQs() {
   return (
@@ -7,10 +7,11 @@ function FAQs() {
       <Body>
         Here's an entire space dedicated to questions I've asked myself about
         this site that you may be asking as well (if you are asking questions
-        about some internet stranger's website, please seek professional help --
-        this is not something you should be wasting time concerning yourself
-        with). This is primarily just me entertaining myself some more.
+        about some internet stranger's website, please seek professional help
+        &ndash; this is not something you should be wasting time concerning
+        yourself with). This is primarily just me entertaining myself some more.
       </Body>
+      <UnderConstruction />
     </Page>
   );
 }

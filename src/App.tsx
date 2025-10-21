@@ -1,16 +1,25 @@
-import { HashRouter, Routes, Route } from "react-router-dom";
-import NavBar from "./components/NavBar/NavBar";
-import Home from "./components/Home/Home";
-import Error from "./components/Error/Error";
-import Timeline from "./components/Timeline/Timeline";
-import Sandbox from "./components/Sandbox/Sandbox";
-import Writeups from "./components/Writeups/Writeups";
-import MATSxTrails from "./components/Writeups/MATSxTrails";
-import FAQs from "./components/FAQs/FAQs";
+import { HashRouter, Routes, Route, useLocation } from "react-router-dom";
+import { NavBar } from "./components/NavBar";
+import { Home } from "./components/Home";
+import { Error } from "./components/Error";
+import { Timeline } from "./components/Timeline";
+import { Sandbox } from "./components/Sandbox";
+import { Writeups, MATSxTrails } from "./components/Writeups";
+import { FAQs } from "./components/FAQs";
+import { useEffect } from "react";
+
+function ScrollTop() {
+  const { pathname } = useLocation();
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+  return null;
+}
 
 function App() {
   return (
     <HashRouter>
+      <ScrollTop />
       <NavBar />
       <Routes>
         <Route path="" element={<Home />} />

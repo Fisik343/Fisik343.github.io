@@ -1,4 +1,4 @@
-import { Body, Header, Page } from "../common";
+import { Body, Header, Page, UnderConstruction } from "../common";
 
 function Sandbox() {
   return (
@@ -8,6 +8,7 @@ function Sandbox() {
         Here's my space to play around! There's not really anything here yet...
         I should fix that sometime soon.
       </Body>
+      <UnderConstruction />
     </Page>
   );
 }

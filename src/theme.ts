@@ -22,10 +22,10 @@ const initialTheme = createTheme({
   palette: {
     mode: "dark",
     primary: {
-      main: "#556cd6",
+      main: "#c8a5ff",
     },
     secondary: {
-      main: "#c8a5ff",
+      main: "#677ddf",
     },
     error: {
       main: red.A400,

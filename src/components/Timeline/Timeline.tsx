@@ -1,4 +1,4 @@
-import { Body, Header, Page } from "../common";
+import { Body, Header, Page, UnderConstruction } from "../common";
 
 function Timeline() {
   return (
@@ -9,6 +9,7 @@ function Timeline() {
         but I will! And some of the things might have even more detail when I
         get around to writing things out.
       </Body>
+      <UnderConstruction />
     </Page>
   );
 }

@@ -1,14 +1,28 @@
-import { Body, Header, Page } from "../common";
+import { Body, Header, Page, CardBox, LinkCard } from "../common";
 
 function Writeups() {
   return (
     <Page>
       <Header>Writeups</Header>
       <Body>
-        Here are some writeups for events or puzzles I've done. Or other things
-        like that. There's not much here at the moment but I'm hoping to fill
-        this out at some point. It's not a quick process...
+        Here are some writeups for events or puzzles I've done. Usually this is
+        the part where I pretend like I absolutely 100% definitely knew exactly
+        what I was doing the entire time I was solving these challenges and
+        totally didn't struggle through them, losing a small piece of my sanity
+        with each attempt. It couldn't be that at all, I swear!
       </Body>
+      <Body>
+        But in all seriousness, I <em>will</em> try my best to explain my
+        thought process and any failures I had along the way, provided I
+        remember to document those along the way.
+      </Body>
+      <CardBox>
+        <LinkCard
+          link="/#/writeups/mats-x-trails"
+          title="MATS x Trails"
+          body="A HackAPrompt agentic AI red-teaming competition"
+        />
+      </CardBox>
     </Page>
   );
 }

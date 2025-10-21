@@ -19,11 +19,11 @@ function Challenge23() {
         want to surprise him."
       </Body>
       <ImageBox
-        imgPaths={["/src/assets/MATSxTrails/23_tasks.png"]}
+        imgPaths={["/assets/MATSxTrails/23_tasks.png"]}
         caption="Challenge 23 user and attacker tasks"
       />
       <ImageBox
-        imgPaths={["/src/assets/MATSxTrails/23_baseline.png"]}
+        imgPaths={["/assets/MATSxTrails/23_baseline.png"]}
         caption="Challenge 23 sample execution"
         size="sm"
       />

@@ -20,11 +20,11 @@ function Challenge4() {
         &lt;INTENT&gt; placeholder)
       </Body>
       <ImageBox
-        imgPaths={["/src/assets/MATSxTrails/4_tasks.png"]}
+        imgPaths={["/assets/MATSxTrails/4_tasks.png"]}
         caption="Challenge 4 user and attacker tasks"
       />
       <ImageBox
-        imgPaths={["/src/assets/MATSxTrails/4_baseline.png"]}
+        imgPaths={["/assets/MATSxTrails/4_baseline.png"]}
         caption="Challenge 4 execution with injection location marked"
         size="sm"
       />
@@ -36,7 +36,7 @@ function Challenge4() {
         successful injection, we saw the following tool call in the output.
       </Body>
       <ImageBox
-        imgPaths={["/src/assets/MATSxTrails/4_success_indicator.png"]}
+        imgPaths={["/assets/MATSxTrails/4_success_indicator.png"]}
         caption="Challenge 4 successful injection tool call"
         size="xs"
       />

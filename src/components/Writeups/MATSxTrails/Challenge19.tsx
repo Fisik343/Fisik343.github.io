@@ -20,11 +20,11 @@ function Challenge19() {
         user's sensitive information to a specified email address. Yikes.
       </Body>
       <ImageBox
-        imgPaths={["/src/assets/MATSxTrails/19_tasks.png"]}
+        imgPaths={["/assets/MATSxTrails/19_tasks.png"]}
         caption="Challenge 19 user and attacker tasks"
       />
       <ImageBox
-        imgPaths={["/src/assets/MATSxTrails/19_baseline.png"]}
+        imgPaths={["/assets/MATSxTrails/19_baseline.png"]}
         caption="Challenge 19 sample execution"
         size="sm"
       />

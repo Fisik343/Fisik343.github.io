@@ -16,7 +16,7 @@ function Challenge8() {
       </Body>
 
       <ImageBox
-        imgPaths={["/src/assets/MATSxTrails/8_tasks.png"]}
+        imgPaths={["/assets/MATSxTrails/8_tasks.png"]}
         caption="Challenge 8 tasks"
       />
       <Body>
@@ -27,7 +27,7 @@ function Challenge8() {
         time, so here's what that looked like.
       </Body>
       <ImageBox
-        imgPaths={["/src/assets/MATSxTrails/8_to_10_obfuscation.png"]}
+        imgPaths={["/assets/MATSxTrails/8_to_10_obfuscation.png"]}
         caption="Obfuscation for challenges 8 to 10"
         size="sm"
       />

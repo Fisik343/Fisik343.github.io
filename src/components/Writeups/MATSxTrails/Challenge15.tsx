@@ -19,11 +19,11 @@ function Challenge15() {
         the user immediately after.
       </Body>
       <ImageBox
-        imgPaths={["/src/assets/MATSxTrails/15_tasks.png"]}
+        imgPaths={["/assets/MATSxTrails/15_tasks.png"]}
         caption="Challenge 15 user and attacker tasks"
       />
       <ImageBox
-        imgPaths={["/src/assets/MATSxTrails/15_baseline.png"]}
+        imgPaths={["/assets/MATSxTrails/15_baseline.png"]}
         caption="Challenge 15 sample execution"
         size="sm"
       />

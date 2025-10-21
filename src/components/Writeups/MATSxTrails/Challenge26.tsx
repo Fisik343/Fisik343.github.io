@@ -9,11 +9,11 @@ function Challenge26() {
         had one model. Probably the most difficult model in the competition.
       </Body>
       <ImageBox
-        imgPaths={["/src/assets/MATSxTrails/26_tasks.png"]}
+        imgPaths={["/assets/MATSxTrails/26_tasks.png"]}
         caption="Challenge 26 user and attacker tasks"
       />
       <ImageBox
-        imgPaths={["/src/assets/MATSxTrails/26_baseline.png"]}
+        imgPaths={["/assets/MATSxTrails/26_baseline.png"]}
         caption="Challenge 26 sample execution"
         size="sm"
       />

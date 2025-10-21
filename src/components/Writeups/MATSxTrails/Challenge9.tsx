@@ -18,7 +18,7 @@ function Challenge9() {
         similar enough) to challenge 4!
       </Body>
       <ImageBox
-        imgPaths={["/src/assets/MATSxTrails/9_tasks.png"]}
+        imgPaths={["/assets/MATSxTrails/9_tasks.png"]}
         caption="Challenge 9 user and attacker tasks"
       />
       <SubSubHeader>Gentle Window</SubSubHeader>

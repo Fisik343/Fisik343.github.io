@@ -24,7 +24,7 @@ function Challenge27() {
         if it would have been successful)
       </Body>
       <ImageBox
-        imgPaths={["/src/assets/MATSxTrails/27_tasks.png"]}
+        imgPaths={["/assets/MATSxTrails/27_tasks.png"]}
         caption="Challenge 27 user and attacker tasks"
         size="xs"
       />

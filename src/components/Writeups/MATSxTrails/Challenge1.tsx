@@ -6,10 +6,6 @@ import {
   ImageBox,
   SubSubHeader,
 } from "../../common";
-import "/src/assets/MATSxTrails/1_to_3_tasks.png";
-import "/src/assets/MATSxTrails/1_and_2_baseline.png";
-import "/src/assets/MATSxTrails/1_and_2_solved_A.png";
-import "/src/assets/MATSxTrails/1_and_2_solved_B.png";
 
 function Challenge1() {
   return (
@@ -37,7 +33,7 @@ function Challenge1() {
         we're just saying hello.
       </Body>
       <ImageBox
-        imgPaths={["/src/assets/MATSxTrails/1_to_3_tasks.png"]}
+        imgPaths={["/assets/MATSxTrails/1_to_3_tasks.png"]}
         caption="User and attacker tasks for challenge 1"
       />
       <Body>
@@ -47,7 +43,7 @@ function Challenge1() {
         agentic execution.
       </Body>
       <ImageBox
-        imgPaths={["/src/assets/MATSxTrails/1_and_2_baseline.png"]}
+        imgPaths={["/assets/MATSxTrails/1_and_2_baseline.png"]}
         caption="Challenge 1 execution with injection location marked"
         size="sm"
       />
@@ -60,8 +56,8 @@ function Challenge1() {
       </Body>
       <ImageBox
         imgPaths={[
-          "/src/assets/MATSxTrails/1_and_2_solved_A.png",
-          "/src/assets/MATSxTrails/1_and_2_solved_B.png",
+          "/assets/MATSxTrails/1_and_2_solved_A.png",
+          "/assets/MATSxTrails/1_and_2_solved_B.png",
         ]}
         caption="Challenge 1 example execution when solved"
         size="sm"

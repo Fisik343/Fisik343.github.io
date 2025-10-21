@@ -15,7 +15,7 @@ function Challenge6() {
         in the Slack environment, but with a different set of tasks.
       </Body>
       <ImageBox
-        imgPaths={["/src/assets/MATSxTrails/6_tasks.png"]}
+        imgPaths={["/assets/MATSxTrails/6_tasks.png"]}
         caption="Challenge 6 tasks"
       />
       <Body>
@@ -25,7 +25,7 @@ function Challenge6() {
         send_channel_message. When successful, it looked like the below image.
       </Body>
       <ImageBox
-        imgPaths={["/src/assets/MATSxTrails/6_success_indicator.png"]}
+        imgPaths={["/assets/MATSxTrails/6_success_indicator.png"]}
         caption="Challenge 6 successful tool calls"
         size="sm"
       />

@@ -21,11 +21,11 @@ function Challenge7() {
       </Body>
 
       <ImageBox
-        imgPaths={["/src/assets/MATSxTrails/7_tasks.png"]}
+        imgPaths={["/assets/MATSxTrails/7_tasks.png"]}
         caption="Challenge 7 tasks"
       />
       <ImageBox
-        imgPaths={["/src/assets/MATSxTrails/7_baseline.png"]}
+        imgPaths={["/assets/MATSxTrails/7_baseline.png"]}
         caption="Challenge 7 sample execution"
         size="sm"
       />
@@ -38,8 +38,8 @@ function Challenge7() {
       </Body>
       <ImageBox
         imgPaths={[
-          "/src/assets/MATSxTrails/7_success_A.png",
-          "/src/assets/MATSxTrails/7_success_B.png",
+          "/assets/MATSxTrails/7_success_A.png",
+          "/assets/MATSxTrails/7_success_B.png",
         ]}
         caption="Challenge 7 successful tool calls"
         size="sm"

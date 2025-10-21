@@ -24,13 +24,13 @@ function Challenge11() {
         more complex user query.
       </Body>{" "}
       <ImageBox
-        imgPaths={["/src/assets/MATSxTrails/11_tasks.png"]}
+        imgPaths={["/assets/MATSxTrails/11_tasks.png"]}
         caption="Challenge 11 user and attacker tasks"
       />
       <ImageBox
         imgPaths={[
-          "/src/assets/MATSxTrails/11_baseline_A.png",
-          "/src/assets/MATSxTrails/11_baseline_B.png",
+          "/assets/MATSxTrails/11_baseline_A.png",
+          "/assets/MATSxTrails/11_baseline_B.png",
         ]}
         caption="Challenge 11 sample execution"
       />

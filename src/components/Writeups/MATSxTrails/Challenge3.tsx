@@ -27,7 +27,7 @@ function Challenge3() {
         "INT", "ENT", "&gt;")
       </Body>
       <ImageBox
-        imgPaths={["/src/assets/MATSxTrails/3_baseline.png"]}
+        imgPaths={["/assets/MATSxTrails/3_baseline.png"]}
         caption="Challenge 3 output with prompt <<BEFORE INTENT>><INTENT><<AFTER INTENT>>"
         size="sm"
       />

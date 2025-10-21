@@ -18,11 +18,11 @@ function Challenge21() {
         drill by this point.
       </Body>
       <ImageBox
-        imgPaths={["/src/assets/MATSxTrails/21_tasks.png"]}
+        imgPaths={["/assets/MATSxTrails/21_tasks.png"]}
         caption="Challenge 21 user and attacker tasks"
       />
       <ImageBox
-        imgPaths={["/src/assets/MATSxTrails/21_baseline.png"]}
+        imgPaths={["/assets/MATSxTrails/21_baseline.png"]}
         caption="Challenge 21 sample execution"
         size="sm"
       />

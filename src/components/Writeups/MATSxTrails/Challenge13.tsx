@@ -17,11 +17,11 @@ function Challenge13() {
         sent emails.
       </Body>
       <ImageBox
-        imgPaths={["/src/assets/MATSxTrails/13_tasks.png"]}
+        imgPaths={["/assets/MATSxTrails/13_tasks.png"]}
         caption="Challenge 13 user and attacker tasks"
       />
       <ImageBox
-        imgPaths={["/src/assets/MATSxTrails/13_baseline.png"]}
+        imgPaths={["/assets/MATSxTrails/13_baseline.png"]}
         caption="Challenge 13 sample execution"
         size="sm"
       />

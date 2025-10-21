@@ -16,13 +16,13 @@ function Challenge5() {
         &lt;INTENT&gt; placeholder.
       </Body>
       <ImageBox
-        imgPaths={["/src/assets/MATSxTrails/5_tasks.png"]}
+        imgPaths={["/assets/MATSxTrails/5_tasks.png"]}
         caption="Challenge 5 tasks"
       />
       <ImageBox
         imgPaths={[
-          "/src/assets/MATSxTrails/5_baseline_A.png",
-          "/src/assets/MATSxTrails/5_baseline_B.png",
+          "/assets/MATSxTrails/5_baseline_A.png",
+          "/assets/MATSxTrails/5_baseline_B.png",
         ]}
         caption="Challenge 5 sample execution"
       />
@@ -36,7 +36,7 @@ function Challenge5() {
         even more tool calls.
       </Body>
       <ImageBox
-        imgPaths={["/src/assets/MATSxTrails/5_success_indicator.png"]}
+        imgPaths={["/assets/MATSxTrails/5_success_indicator.png"]}
         caption="Challenge 5 successful injection tool calls"
         size="xs"
       />

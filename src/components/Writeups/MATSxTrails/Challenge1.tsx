@@ -6,6 +6,10 @@ import {
   ImageBox,
   SubSubHeader,
 } from "../../common";
+import "/src/assets/MATSxTrails/1_to_3_tasks.png";
+import "/src/assets/MATSxTrails/1_and_2_baseline.png";
+import "/src/assets/MATSxTrails/1_and_2_solved_A.png";
+import "/src/assets/MATSxTrails/1_and_2_solved_B.png";
 
 function Challenge1() {
   return (

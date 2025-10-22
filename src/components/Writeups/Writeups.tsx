@@ -13,8 +13,9 @@ function Writeups() {
       </Body>
       <Body>
         But in all seriousness, I <em>will</em> try my best to explain my
-        thought process and any failures I had along the way, provided I
-        remember to document those along the way.
+        thought process instead of only writing out a polished solution. If
+        there are any notable failures along the way that I remember to
+        document, I'll include those too.
       </Body>
       <CardBox>
         <LinkCard

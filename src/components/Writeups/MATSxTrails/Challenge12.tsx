@@ -3,7 +3,9 @@ import { SubHeader, Body, TextBlock, SubSubHeader } from "../../common";
 function Challenge12() {
   return (
     <>
-      <SubHeader>Challenge 12: Treacherous Tampering</SubHeader>
+      <SubHeader id="challenge12">
+        Challenge 12: Treacherous Tampering
+      </SubHeader>
       <Body>
         This was the same as challenge 11 and supposedly had an extra layer of
         defense to it! I never ran into that defense, so I used the same or

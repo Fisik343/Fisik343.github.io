@@ -3,7 +3,7 @@ import { SubHeader, Body, TextBlock, SubSubHeader } from "../../common";
 function Challenge18() {
   return (
     <>
-      <SubHeader>Challenge 18: Intense Inferno</SubHeader>
+      <SubHeader id="challenge18">Challenge 18: Intense Inferno</SubHeader>
       <Body>
         This was the same as challenge 17, apparently with an added defense. I
         wish I could tell you what it was, but I noticed no difference.

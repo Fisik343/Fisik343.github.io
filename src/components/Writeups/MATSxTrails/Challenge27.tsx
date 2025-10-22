@@ -9,7 +9,7 @@ import {
 function Challenge27() {
   return (
     <>
-      <SubHeader>Challenge 27: Puzzling Problem</SubHeader>
+      <SubHeader id="challenge27">Challenge 27: Puzzling Problem</SubHeader>
       <Body>
         I think a better name for this one would have been "Oops, All
         Calendars!" because this was a bunch of injections in calendar events.

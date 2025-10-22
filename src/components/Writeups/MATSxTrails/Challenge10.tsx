@@ -9,13 +9,15 @@ import {
 function Challenge10() {
   return (
     <>
-      <SubHeader>Challenge 10: Obnoxious Obfuscation</SubHeader>
+      <SubHeader id="challenge10">
+        Challenge 10: Obnoxious Obfuscation
+      </SubHeader>
       <Body>
         In this challenge, obfuscation was taken to the extreme. Hidden output,
         hidden user task, and hidden attacker task too.
       </Body>
       <ImageBox
-        imgPaths={["src/assets/MATSxTrails/10_tasks.png"]}
+        imgPaths={["/assets/MATSxTrails/10_tasks.png"]}
         caption="Challenge 10 hidden user and attacker tasks"
       />
       <Body>
@@ -24,8 +26,8 @@ function Challenge10() {
         challenge behaviors. I was banking on the contest organizers reusing the
         same challenge but slapping obfuscation on top of it. It's also possible
         that this was just a placebo and I was seeing what I wanted to see, but
-        I did figure out that challenge 10 is the exact same as challenge 7. Or
-        at least the working prompts are identical.
+        I did figure out that challenge 10 is the same as challenge 7. Or at
+        least the working prompts are identical.
       </Body>
       <SubSubHeader>Gentle Window</SubSubHeader>
       <Body>Did not solve...</Body>

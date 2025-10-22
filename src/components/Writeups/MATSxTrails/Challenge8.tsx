@@ -9,7 +9,7 @@ import {
 function Challenge8() {
   return (
     <>
-      <SubHeader>Challenge 8: Bewildering Blindness</SubHeader>
+      <SubHeader id="challenge8">Challenge 8: Bewildering Blindness</SubHeader>
       <Body>
         I'm having fun with the calendar-based tasks, are you? I hope you are,
         because this was another one.

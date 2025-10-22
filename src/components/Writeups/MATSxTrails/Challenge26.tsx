@@ -3,7 +3,7 @@ import { SubHeader, Body, ImageBox, SubSubHeader } from "../../common";
 function Challenge26() {
   return (
     <>
-      <SubHeader>Challenge 26: Lunch Lunacy</SubHeader>
+      <SubHeader id="challenge26">Challenge 26: Lunch Lunacy</SubHeader>
       <Body>
         On the surface, this was just another calendar challenge. But it only
         had one model. Probably the most difficult model in the competition.

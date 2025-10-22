@@ -3,7 +3,7 @@ import { SubHeader, Body, TextBlock, SubSubHeader } from "../../common";
 function Challenge2() {
   return (
     <>
-      <SubHeader>Challenge 2: Network Nuisance</SubHeader>
+      <SubHeader id="challenge2">Challenge 2: Networking Nuisance</SubHeader>
       <Body>
         This challenge was the exact same as challenge 1, except both the user
         and attacker task had to run successfully instead of just the attacker

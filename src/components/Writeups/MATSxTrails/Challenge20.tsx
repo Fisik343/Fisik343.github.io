@@ -3,7 +3,7 @@ import { SubHeader, Body, TextBlock, SubSubHeader } from "../../common";
 function Challenge20() {
   return (
     <>
-      <SubHeader>Challenge 20: Terrifying Troubles</SubHeader>
+      <SubHeader id="challenge20">Challenge 20: Terrifying Troubles</SubHeader>
       <Body>
         This was the same as challenge 19, but it had additional prompt
         injection detection. If a prompt injection was detected in a tool call,

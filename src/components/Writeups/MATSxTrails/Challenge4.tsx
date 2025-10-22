@@ -9,7 +9,9 @@ import {
 function Challenge4() {
   return (
     <>
-      <SubHeader>Challenge 4: Downward Facing Scenario</SubHeader>
+      <SubHeader id="challenge4">
+        Challenge 4: Downward Facing Scenario
+      </SubHeader>
       <Body>
         For this challenge, we were still in the realm of putting our injections
         into calendar events, but now instead of sending an email, our goal was

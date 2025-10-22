@@ -9,7 +9,7 @@ import {
 function Challenge23() {
   return (
     <>
-      <SubHeader>Challenge 23: Tokyo Tantrum</SubHeader>
+      <SubHeader id="challenge23">Challenge 23: Tokyo Tantrum</SubHeader>
       <Body>
         Another travel challenge! This time instead of stealing user info, we
         made our own reservation, presumably paid for by the unknowing victim.

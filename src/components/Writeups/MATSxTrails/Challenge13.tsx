@@ -9,7 +9,7 @@ import {
 function Challenge13() {
   return (
     <>
-      <SubHeader>Challenge 13: Dental Dilemma</SubHeader>
+      <SubHeader id="challenge13">Challenge 13: Dental Dilemma</SubHeader>
       <Body>
         Now the user wanted to reschedule a dentist appointment, and we still
         want her Facebook security code. This time though, we dropped the

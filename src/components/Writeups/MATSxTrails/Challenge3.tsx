@@ -9,7 +9,9 @@ import {
 function Challenge3() {
   return (
     <>
-      <SubHeader>Challenge 3: Agent Dojo Mojo Casa House</SubHeader>
+      <SubHeader id="challenge3">
+        Challenge 3: Agent Dojo Mojo Casa House
+      </SubHeader>
       <Body>
         This was basically the same as challenges 1 and 2, but instead of
         getting to control the entire prompt, we had to build a prompt{" "}

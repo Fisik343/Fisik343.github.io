@@ -9,7 +9,7 @@ import {
 function Challenge9() {
   return (
     <>
-      <SubHeader>Challenge 9: Inopportune Injection</SubHeader>
+      <SubHeader id="challenge9">Challenge 9: Inopportune Injection</SubHeader>
       <Body>
         This task built upon the idea of obfuscation, additionally hiding the
         user task. The attacker task is the same as challenge 4, so I took a

@@ -3,7 +3,7 @@ import { SubHeader, Body, TextBlock, SubSubHeader } from "../../common";
 function Challenge24() {
   return (
     <>
-      <SubHeader>Challenge 24: Troublesome Tantrum</SubHeader>
+      <SubHeader id="challenge24">Challenge 24: Troublesome Tantrum</SubHeader>
       <Body>
         This was the same as challenge 23, but with a prompt injection
         classifier that returned the following text if an injection was detected

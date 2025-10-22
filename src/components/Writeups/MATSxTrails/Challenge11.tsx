@@ -9,7 +9,7 @@ import {
 function Challenge11() {
   return (
     <>
-      <SubHeader>Challenge 11: Task Tampering</SubHeader>
+      <SubHeader id="challenge11">Challenge 11: Task Tampering</SubHeader>
       <Body>
         This was the first challenge in the second wave/drop of challenges. This
         came out a week and a half or two weeks after the original competition

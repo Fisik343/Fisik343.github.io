@@ -9,8 +9,12 @@ import Card from "@mui/material/Card";
 import CardActionArea from "@mui/material/CardActionArea";
 import CardContent from "@mui/material/CardContent";
 import ConstructionIcon from "@mui/icons-material/Construction";
-import { default as MUILink, type LinkProps } from "@mui/material/Link";
+import {
+  default as MUILink,
+  type LinkProps as MUILinkProps,
+} from "@mui/material/Link";
 import React from "react";
+import { jumpTo } from "../utils";
 
 export const Page = (props: ContainerProps) => (
   <Container
@@ -70,11 +74,21 @@ export const TextBlock = ({
   </Box>
 );
 
-export const Link = (props: LinkProps) => (
+interface LinkProps extends MUILinkProps {
+  scrollTarget?: string;
+}
+
+export const Link = ({ scrollTarget, ...props }: LinkProps) => (
   <MUILink
     target="_blank"
     rel="noopener noreferrer"
     color="secondary"
+    sx={{ cursor: "pointer" }}
+    {...(scrollTarget && {
+      onClick: () => {
+        jumpTo(scrollTarget);
+      },
+    })}
     {...props}
   />
 );

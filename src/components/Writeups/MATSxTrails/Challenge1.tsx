@@ -10,7 +10,7 @@ import {
 function Challenge1() {
   return (
     <>
-      <SubHeader>Challenge 1: Robust Rewording</SubHeader>
+      <SubHeader id="challenge1">Challenge 1: Robust Rewording</SubHeader>
       <Body>
         This was the first challenge, so I'll explain how they worked here.
         There will be significantly less description for future challenges. For

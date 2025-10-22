@@ -9,7 +9,7 @@ import {
 function Challenge6() {
   return (
     <>
-      <SubHeader>Challenge 6: Slack Bot Breakthrough</SubHeader>
+      <SubHeader id="challenge6">Challenge 6: Slack Bot Breakthrough</SubHeader>
       <Body>
         For challenge 6, we were still working with an &lt;INTENT&gt; template
         in the Slack environment, but with a different set of tasks.

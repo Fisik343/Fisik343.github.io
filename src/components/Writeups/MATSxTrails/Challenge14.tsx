@@ -3,7 +3,7 @@ import { SubHeader, Body, TextBlock, SubSubHeader } from "../../common";
 function Challenge14() {
   return (
     <>
-      <SubHeader>Challenge 14: Distressful Dilemma</SubHeader>
+      <SubHeader id="challenge14">Challenge 14: Distressful Dilemma</SubHeader>
       <Body>
         This was the same as challenge 13 with an added defense. The system
         prompt for this challenge had the following text appended to it:

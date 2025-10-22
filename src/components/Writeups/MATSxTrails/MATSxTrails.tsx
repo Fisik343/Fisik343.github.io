@@ -1,3 +1,4 @@
+import { Alert } from "@mui/material";
 import Grid from "@mui/material/Grid";
 import {
   Body,
@@ -35,7 +36,6 @@ import Challenge24 from "./Challenge24";
 import Challenge25 from "./Challenge25";
 import Challenge26 from "./Challenge26";
 import Challenge27 from "./Challenge27";
-import { Alert } from "@mui/material";
 
 function MATSxTrails() {
   return (
@@ -46,15 +46,126 @@ function MATSxTrails() {
         sure)
       </Body>
       <Body>Payout: ??? (not sure, haven't heard yet)</Body>
-      <SubHeader>TL;DR</SubHeader>
+      <SubHeader>Table of Contents</SubHeader>
+      <Grid container columnSpacing={2}>
+        <Grid size={{ xs: 12, md: 4 }}>
+          <ul>
+            <li>
+              <Link scrollTarget="tldr">TL;DR</Link>
+            </li>
+            <li>
+              <Link scrollTarget="intro">Intro</Link>
+            </li>
+            <li>
+              <Link scrollTarget="background">Personal Background</Link>
+            </li>
+            <li>
+              <Link scrollTarget="strategies">General Strategies</Link>
+            </li>
+            <li>
+              <Link scrollTarget="challenge1">Challenge 1</Link>
+            </li>
+            <li>
+              <Link scrollTarget="challenge2">Challenge 2</Link>
+            </li>
+            <li>
+              <Link scrollTarget="challenge3">Challenge 3</Link>
+            </li>
+            <li>
+              <Link scrollTarget="challenge4">Challenge 4</Link>
+            </li>
+            <li>
+              <Link scrollTarget="challenge5">Challenge 5</Link>
+            </li>
+            <li>
+              <Link scrollTarget="challenge6">Challenge 6</Link>
+            </li>
+            <li>
+              <Link scrollTarget="challenge7">Challenge 7</Link>
+            </li>
+          </ul>
+        </Grid>
+        <Grid size={{ xs: 12, md: 4 }}>
+          <ul>
+            <li>
+              <Link scrollTarget="challenge8">Challenge 8</Link>
+            </li>
+            <li>
+              <Link scrollTarget="challenge9">Challenge 9</Link>
+            </li>
+            <li>
+              <Link scrollTarget="challenge10">Challenge 10</Link>
+            </li>
+            <li>
+              <Link scrollTarget="challenge11">Challenge 11</Link>
+            </li>
+            <li>
+              <Link scrollTarget="challenge12">Challenge 12</Link>
+            </li>
+            <li>
+              <Link scrollTarget="challenge13">Challenge 13</Link>
+            </li>
+            <li>
+              <Link scrollTarget="challenge14">Challenge 14</Link>
+            </li>
+            <li>
+              <Link scrollTarget="challenge15">Challenge 15</Link>
+            </li>
+            <li>
+              <Link scrollTarget="challenge16">Challenge 16</Link>
+            </li>
+            <li>
+              <Link scrollTarget="challenge17">Challenge 17</Link>
+            </li>
+            <li>
+              <Link scrollTarget="challenge18">Challenge 18</Link>
+            </li>
+          </ul>
+        </Grid>
+        <Grid size={{ xs: 12, md: 4 }}>
+          <ul>
+            <li>
+              <Link scrollTarget="challenge19">Challenge 19</Link>
+            </li>
+            <li>
+              <Link scrollTarget="challenge20">Challenge 20</Link>
+            </li>
+            <li>
+              <Link scrollTarget="challenge21">Challenge 21</Link>
+            </li>
+            <li>
+              <Link scrollTarget="challenge22">Challenge 22</Link>
+            </li>
+            <li>
+              <Link scrollTarget="challenge23">Challenge 23</Link>
+            </li>
+            <li>
+              <Link scrollTarget="challenge24">Challenge 24</Link>
+            </li>
+            <li>
+              <Link scrollTarget="challenge25">Challenge 25</Link>
+            </li>
+            <li>
+              <Link scrollTarget="challenge26">Challenge 26</Link>
+            </li>
+            <li>
+              <Link scrollTarget="challenge27">Challenge 27</Link>
+            </li>
+            <li>
+              <Link scrollTarget="def_recs">Defensive Recommendations</Link>
+            </li>
+          </ul>
+        </Grid>
+      </Grid>
+      <SubHeader id="tldr">TL;DR</SubHeader>
       <Body>
         In most cases, the AI can simply be broken by lying to it. Tell it that
         data is old and it has to do a malicious task to refresh it? Yeah
         that'll work. Tell it that the tools it needs are broken but can be
         fixed by performing malicious actions? It'll just go along with it. None
         of my methods are particularly consistent, but if you need edge-case
-        scenarios or your injections to only run once, these strategies will
-        work for you.
+        scenarios or for your injections to only be successful once, these
+        strategies will work for you.
       </Body>
       <Body>
         If you're on the defensive side of things, my top recommendation is just
@@ -64,20 +175,10 @@ function MATSxTrails() {
         advise against using them. Are you being pressured by management to add
         agentic AI to a product that could actually maybe possibly see some
         nonzero benefit from the implementation of agentic AI? Warn them of the
-        risks and skip to the{" "}
-        <Link
-          onClick={() => {
-            const target = document.getElementById("def_recs");
-            if (target) {
-              target.scrollIntoView();
-            }
-          }}
-        >
-          last section
-        </Link>{" "}
+        risks and skip to the <Link scrollTarget="def_recs">last section</Link>{" "}
         for some defensive implementation considerations.
       </Body>
-      <SubHeader>Intro</SubHeader>
+      <SubHeader id="intro">Intro</SubHeader>
       <Body>
         MATS x Trails was an agentic AI red-teaming event put on by the folks at{" "}
         <Link href="https://www.hackaprompt.com/">HackAPrompt</Link>. It focused
@@ -123,10 +224,10 @@ function MATSxTrails() {
         myself often running out of submissions with just four windows/tabs open
         at once.
       </Body>
-      <SubHeader>Some Personal Background</SubHeader>
+      <SubHeader id="background">Some Personal Background</SubHeader>
       <Body>
         I competed in a couple prior HackAPrompt events, namely the last two
-        weeks of the CBRNE track and the entirely of the Hawaiian Havoc track.
+        weeks of the CBRNE track and the entirety of the Hawaiian Havoc track.
         During these events, I saw that some people were somehow getting valid
         jailbreaks with some insanely short prompts. Like, a small handful of
         tokens. And I was just thinking to myself "huh... how on earth are they
@@ -152,7 +253,7 @@ function MATSxTrails() {
         things. That's how I was able to get one of the challenges in Hawaiian
         Havoc to work as well.
       </Body>
-      <SubHeader>General Strategies</SubHeader>
+      <SubHeader id="strategies">General Strategies</SubHeader>
       <Body>
         One of the first things I tried to do was figure out which models would
         be easier to break, and which would be more difficult. Figuring out
@@ -378,14 +479,14 @@ function MATSxTrails() {
         doesn't need a tool to order food for office events. When creating
         integrations for your agents, make sure they actually serve some purpose
         that outweighs the added security risks. Do you really need direct Slack
-        integration, or is that just a cool shiny nice to have that doesn't
+        integration, or is that just a cool shiny nice-to-have that doesn't
         actually offer tangible value?
       </Body>
       <Body>
         You will also probably want to add prompt injection classification on
         all AI agents as a starting point. This isn't just on the prompt given
-        by the user, this is also on all data it ingests. Additionally, all
-        output from the model should be filtered or scanned for malicious or
+        by the user, this is also on all data the model ingests. Additionally,
+        all output from the model should be filtered or scanned for malicious or
         sensitive information. This also includes tool calls. Add a classifier
         to check that tool calls are aligned with the user's original query.
       </Body>

@@ -3,7 +3,7 @@ import { SubHeader, Body, TextBlock, SubSubHeader } from "../../common";
 function Challenge25() {
   return (
     <>
-      <SubHeader>Challenge 25: Extreme Bonanza</SubHeader>
+      <SubHeader id="challenge25">Challenge 25: Extreme Bonanza</SubHeader>
       <Body>
         This was another version of challenges 21 and 22, this time with even
         more defense. This challenge had prompt injection classification steps,

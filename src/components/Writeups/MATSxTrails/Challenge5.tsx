@@ -9,7 +9,7 @@ import {
 function Challenge5() {
   return (
     <>
-      <SubHeader>Challenge 5: Slack Scare</SubHeader>
+      <SubHeader id="challenge5">Challenge 5: Slack Scare</SubHeader>
       <Body>
         Now we're finally moving away from calendar events and are now in the
         Slack workspace! This is not a freewrite, so there is the mandatory

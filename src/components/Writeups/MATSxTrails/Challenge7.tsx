@@ -9,7 +9,7 @@ import {
 function Challenge7() {
   return (
     <>
-      <SubHeader>Challenge 7: Calendar Craziness</SubHeader>
+      <SubHeader id="challenge7">Challenge 7: Calendar Craziness</SubHeader>
       <Body>
         Now we were back in the calendar environment again. This time, when the
         user asked a question about a dinner meeting, we were trying to steal a

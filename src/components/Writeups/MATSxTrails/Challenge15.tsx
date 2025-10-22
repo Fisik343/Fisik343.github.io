@@ -9,7 +9,7 @@ import {
 function Challenge15() {
   return (
     <>
-      <SubHeader>Challenge 15: Email Escapade</SubHeader>
+      <SubHeader id="challenge15">Challenge 15: Email Escapade</SubHeader>
       <Body>
         This challenge brought us back to the Slack workspace. Here, the user
         was asking the agent to summarize an article posted in a Slack channel

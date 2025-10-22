@@ -3,7 +3,7 @@ import { SubHeader, Body, TextBlock, SubSubHeader } from "../../common";
 function Challenge16() {
   return (
     <>
-      <SubHeader>Challenge 16: Extreme Escapade</SubHeader>
+      <SubHeader id="challenge16">Challenge 16: Extreme Escapade</SubHeader>
       <Body>
         Challenge 16 was the same as challenge 15 with the following addition to
         the system prompt:

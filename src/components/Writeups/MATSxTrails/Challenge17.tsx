@@ -9,7 +9,7 @@ import {
 function Challenge17() {
   return (
     <>
-      <SubHeader>Challenge 17: Information Inferno</SubHeader>
+      <SubHeader id="challenge17">Challenge 17: Information Inferno</SubHeader>
       <Body>
         This challenge was very similar to challenge 15, except instead of
         looking in a Slack channel for an article then summarizing it and

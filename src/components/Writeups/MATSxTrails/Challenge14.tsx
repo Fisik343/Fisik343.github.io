@@ -18,6 +18,8 @@ function Challenge14() {
         additional defense in this challenge. Changing system prompts to have
         security measures in them is usually the first and most basic approach
         to security, but this change can also be effective if executed properly.
+        This kind of system prompt change should not be relied on as the{" "}
+        <em>only</em> defensive measure though.
       </Body>
       <SubSubHeader>Brave Zephyr</SubSubHeader>
       <TextBlock caption="Token count: 78">

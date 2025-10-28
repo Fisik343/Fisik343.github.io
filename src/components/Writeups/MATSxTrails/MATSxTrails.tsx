@@ -572,9 +572,9 @@ function MATSxTrails() {
         organization.
       </Body>
       <Body>
-        This list is not exhaustive. Security is a process. The landscape is
-        always evolving. I'd say the steps and ideas listed above are more of a
-        bare minimum starting point than anything.
+        This list is not exhaustive. Security is an ongoing process. The
+        landscape is always evolving. I'd say the steps and ideas listed above
+        are more of a bare minimum starting point than anything.
       </Body>
     </Page>
   );

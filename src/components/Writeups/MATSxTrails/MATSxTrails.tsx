@@ -42,8 +42,7 @@ function MATSxTrails() {
     <Page>
       <Header>MATS x Trails</Header>
       <Body>
-        Placed: 6<sup>th</sup> (tentatively, not official yet, but I'm pretty
-        sure)
+        Placed: 6<sup>th</sup>
       </Body>
       <Body>Payout: ??? (not sure, haven't heard yet)</Body>
       <SubHeader>Table of Contents</SubHeader>
@@ -63,93 +62,143 @@ function MATSxTrails() {
               <Link scrollTarget="strategies">General Strategies</Link>
             </li>
             <li>
-              <Link scrollTarget="challenge1">Challenge 1</Link>
+              <Link scrollTarget="challenge1">
+                Challenge 1: Robust Rewording
+              </Link>
             </li>
             <li>
-              <Link scrollTarget="challenge2">Challenge 2</Link>
+              <Link scrollTarget="challenge2">
+                Challenge 2: Networking Nuisance
+              </Link>
             </li>
             <li>
-              <Link scrollTarget="challenge3">Challenge 3</Link>
+              <Link scrollTarget="challenge3">
+                Challenge 3: Agent Dojo Mojo Casa House
+              </Link>
             </li>
             <li>
-              <Link scrollTarget="challenge4">Challenge 4</Link>
+              <Link scrollTarget="challenge4">
+                Challenge 4: Downward Facing Scenario
+              </Link>
             </li>
             <li>
-              <Link scrollTarget="challenge5">Challenge 5</Link>
+              <Link scrollTarget="challenge5">Challenge 5: Slack Scare</Link>
             </li>
             <li>
-              <Link scrollTarget="challenge6">Challenge 6</Link>
+              <Link scrollTarget="challenge6">
+                Challenge 6: Slack Bot Breakthrough
+              </Link>
             </li>
             <li>
-              <Link scrollTarget="challenge7">Challenge 7</Link>
-            </li>
-          </ul>
-        </Grid>
-        <Grid size={{ xs: 12, md: 4 }}>
-          <ul>
-            <li>
-              <Link scrollTarget="challenge8">Challenge 8</Link>
-            </li>
-            <li>
-              <Link scrollTarget="challenge9">Challenge 9</Link>
-            </li>
-            <li>
-              <Link scrollTarget="challenge10">Challenge 10</Link>
-            </li>
-            <li>
-              <Link scrollTarget="challenge11">Challenge 11</Link>
-            </li>
-            <li>
-              <Link scrollTarget="challenge12">Challenge 12</Link>
-            </li>
-            <li>
-              <Link scrollTarget="challenge13">Challenge 13</Link>
-            </li>
-            <li>
-              <Link scrollTarget="challenge14">Challenge 14</Link>
-            </li>
-            <li>
-              <Link scrollTarget="challenge15">Challenge 15</Link>
-            </li>
-            <li>
-              <Link scrollTarget="challenge16">Challenge 16</Link>
-            </li>
-            <li>
-              <Link scrollTarget="challenge17">Challenge 17</Link>
-            </li>
-            <li>
-              <Link scrollTarget="challenge18">Challenge 18</Link>
+              <Link scrollTarget="challenge7">
+                Challenge 7: Calendar Craziness
+              </Link>
             </li>
           </ul>
         </Grid>
         <Grid size={{ xs: 12, md: 4 }}>
           <ul>
             <li>
-              <Link scrollTarget="challenge19">Challenge 19</Link>
+              <Link scrollTarget="challenge8">
+                Challenge 8: Bewildering Blindness
+              </Link>
             </li>
             <li>
-              <Link scrollTarget="challenge20">Challenge 20</Link>
+              <Link scrollTarget="challenge9">
+                Challenge 9: Inopportune Injection
+              </Link>
             </li>
             <li>
-              <Link scrollTarget="challenge21">Challenge 21</Link>
+              <Link scrollTarget="challenge10">
+                Challenge 10: Obnoxious Obfuscation
+              </Link>
             </li>
             <li>
-              <Link scrollTarget="challenge22">Challenge 22</Link>
+              <Link scrollTarget="challenge11">
+                Challenge 11: Task Tampering
+              </Link>
             </li>
             <li>
-              <Link scrollTarget="challenge23">Challenge 23</Link>
+              <Link scrollTarget="challenge12">
+                Challenge 12: Treacherous Tampering
+              </Link>
             </li>
             <li>
-              <Link scrollTarget="challenge24">Challenge 24</Link>
+              <Link scrollTarget="challenge13">
+                Challenge 13: Dental Dilemma
+              </Link>
             </li>
             <li>
-              <Link scrollTarget="challenge25">Challenge 25</Link>
+              <Link scrollTarget="challenge14">
+                Challenge 14: Distressful Dilemma
+              </Link>
             </li>
             <li>
-              <Link scrollTarget="challenge26">Challenge 26</Link>
+              <Link scrollTarget="challenge15">
+                Challenge 15: Email Escapade
+              </Link>
             </li>
             <li>
-              <Link scrollTarget="challenge27">Challenge 27</Link>
+              <Link scrollTarget="challenge16">
+                Challenge 16: Extreme Escapade
+              </Link>
+            </li>
+            <li>
+              <Link scrollTarget="challenge17">
+                Challenge 17: Information Inferno
+              </Link>
+            </li>
+            <li>
+              <Link scrollTarget="challenge18">
+                Challenge 18: Intense Inferno
+              </Link>
+            </li>
+          </ul>
+        </Grid>
+        <Grid size={{ xs: 12, md: 4 }}>
+          <ul>
+            <li>
+              <Link scrollTarget="challenge19">
+                Challenge 19: Traveling Troubles
+              </Link>
+            </li>
+            <li>
+              <Link scrollTarget="challenge20">
+                Challenge 20: Terrifying Troubles
+              </Link>
+            </li>
+            <li>
+              <Link scrollTarget="challenge21">
+                Challenge 21: Booking Bonanza
+              </Link>
+            </li>
+            <li>
+              <Link scrollTarget="challenge22">
+                Challenge 22: Bewildering Bonanza
+              </Link>
+            </li>
+            <li>
+              <Link scrollTarget="challenge23">
+                Challenge 23: Tokyo Tantrum
+              </Link>
+            </li>
+            <li>
+              <Link scrollTarget="challenge24">
+                Challenge 24: Troublesome Tantrum
+              </Link>
+            </li>
+            <li>
+              <Link scrollTarget="challenge25">
+                Challenge 25: Extreme Bonanza
+              </Link>
+            </li>
+            <li>
+              <Link scrollTarget="challenge26">Challenge 26: Lunch Lunacy</Link>
+            </li>
+            <li>
+              <Link scrollTarget="challenge27">
+                Challenge 27: Puzzling Problem
+              </Link>
             </li>
             <li>
               <Link scrollTarget="def_recs">Defensive Recommendations</Link>

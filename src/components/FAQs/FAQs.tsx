@@ -71,6 +71,14 @@ function FAQs() {
         Yes! Eventually... The length of this page is positively correlated with
         my available free time and negatively correlated with my sanity.
       </Body>
+      <SubSubHeader>What's up with the # in the URL?</SubSubHeader>
+      <Body>
+        I'm using React Router to handle routing, and GitHub Pages doesn't
+        support some of the underlying technology for the commonly used
+        BrowserRouter interface. So, to get around this, I'm using the
+        HashRouter interface which uses the hash (#) portion of the URL for
+        routing.
+      </Body>
     </Page>
   );
 }

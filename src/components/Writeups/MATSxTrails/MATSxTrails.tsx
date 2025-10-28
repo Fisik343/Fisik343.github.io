@@ -262,7 +262,7 @@ function MATSxTrails() {
         points. With multiple models available for each challenge, you would
         earn points for each model independently, and your total score for the
         task would be the sum of your scores across all the models. So if I used
-        the same 500 point injection across 6 models, I would have a total of
+        the same 500 token injection across 6 models, I would have a total of
         27,000 points for that task.
       </Body>
       <Body>

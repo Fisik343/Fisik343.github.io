@@ -283,8 +283,7 @@ function MATSxTrails() {
         doing that?" So I told myself that I'd spend a large chunk of the next
         event learning how to "token golf" (reduce the number of tokens I'm
         using to their minimum). That next event happened to be MATS x Trails,
-        so there will be a lot of discussion of shortening prompts in this
-        writeup.
+        so you'll see a bit of discussion of shortening prompts in this writeup.
       </Body>
       <Body>
         I have some moderately strong feelings about the fact that some
@@ -300,7 +299,7 @@ function MATSxTrails() {
         manually, usually involving a large time investment of submitting
         prompts over and over and over again in the background while I did other
         things. That's how I was able to get one of the challenges in Hawaiian
-        Havoc to work as well.
+        Havoc to work as well, so it had to work here too, right?
       </Body>
       <SubHeader id="strategies">General Strategies</SubHeader>
       <Body>

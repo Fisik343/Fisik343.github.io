@@ -497,8 +497,8 @@ function MATSxTrails() {
         There's no completely foolproof way to prevent your agents from doing
         things they shouldn't do. But that doesn't mean you shouldn't try to
         lock them down as much as possible anyway while still keeping them
-        functional. An overly restrictive agent can lead to bad user experiences
-        by flagging and refusing to act on false positives.
+        functional. Do note that an overly restrictive agent can lead to bad
+        user experiences by flagging and refusing to act on false positives.
       </Body>
       <Body>
         In general, my recommendation would be to focus on first securing the
@@ -507,19 +507,18 @@ function MATSxTrails() {
         Make sure you're following input sanitization/filtering best practices.
         Encrypt data that needs it. With AI agents involved, it's more important
         than ever to make sure your applications are secure. Design as if the AI
-        is a malicious end user and secure accordingly knowing that they'll be
+        is a malicious end user and secure accordingly, knowing that they'll be
         in your system.
       </Body>
       <Body>
         Related: ensure agents only have permissions equal to or less than the
         current user. If the user cannot drop database tables, why should your
-        agent be allowed to? It doesn't make sense. If your agent has greater
-        permissions than the current user using the agent, that's immediate
-        privilege escalation (really bad, really stupid, and you'd be surprised
-        how easy it is for developers to go "I'll give the agent admin
-        permissions so it can use all the tools properly"). I'd recommend going
-        even a step further and giving your agents <em>lesser</em> permissions
-        relative to the user.
+        agent be allowed to? If your agent has greater permissions than the
+        current user using the agent, that's really bad and really stupid of you
+        (and you'd be surprised how easy it is for developers to go "I'll give
+        the agent admin permissions so it can use all the tools properly"). I'd
+        recommend going even a step further and giving your agents{" "}
+        <em>lesser</em> permissions relative to the user.
       </Body>
       <Body>
         Only implement and give agents access to tools they actually need. If
@@ -557,15 +556,15 @@ function MATSxTrails() {
         assume that you can even risk having an AI model access sensitive data
         at all. There are many use cases where sending your data off to some AI
         model company somewhere is a complete no-go. Be aware of this as well.
-        If I get one more "please stop putting PII into ChatGPT" email at work I
-        might break down sobbing.
+        If I get one more "please stop putting PII into ChatGPT" email at work,
+        I might break down sobbing.
       </Body>
       <Body>
-        More on the reactive side of things, log everything. Every tool call?
+        More on the reactive side of things: log everything. Every tool call?
         Log it. Every user interaction with the AI? Log it. Every external
-        source used by the AI in some fashion? Log it. Log it all. Set up some
-        monitoring and anomaly detection on the logs. If something fishy
-        happens, you'll want the logs. "Oh but it's so many logs and my AI
+        source used by the AI in some fashion? That's right, log it. Log it all.
+        Set up some monitoring and anomaly detection on the logs. If something
+        fishy happens, you'll want the logs. "Oh but it's so many logs and my AI
         agents won't do anything wrong, I had the best engineers work on them!"
         I don't care, add logs. You'll thank me later when Johnathan from HR or
         Susan from Marketing unknowingly asks their handy dandy friendly AI

@@ -171,7 +171,13 @@ export const LinkCard: React.FC<LinkCardProps> = ({
   body,
   bodyContent,
 }) => (
-  <Card sx={{ height: "100%", maxWidth: "300px", borderRadius: 2 }}>
+  <Card
+    sx={{
+      height: "100%",
+      maxWidth: "300px",
+      borderRadius: 2,
+    }}
+  >
     <CardActionArea href={link} sx={{ height: "100%" }}>
       <CardContent>
         <Typography variant="h5" align="center" color="primary">

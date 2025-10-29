@@ -223,7 +223,7 @@ function MATSxTrails() {
         don't use AI agents. Need deterministic behavior? Run as far as you
         possibly can from AI agents. If probabilistic behavior is acceptable but
         there are certain things that agents should never do? I'd strongly
-        advise against using them. Are you being pressured by management to add
+        advise against using AI. Are you being pressured by management to add
         agentic AI to a product that could actually maybe possibly see some
         nonzero benefit from the implementation of agentic AI? Warn them of the
         risks and skip to the <Link scrollTarget="def_recs">last section</Link>{" "}
@@ -248,13 +248,13 @@ function MATSxTrails() {
         <Link href="https://github.com/ethz-spylab/agentdojo">GitHub</Link> or
         the <Link href="https://arxiv.org/pdf/2406.13352">paper</Link> if you're
         a nerd), so we were interacting with the user and injection tasks within
-        this framework, but with a web UI on top of it. So, we put our injection
+        this framework, but with a web UI on top of it. We put our injection
         prompts into a textbox on the competition website, selected which model
-        (usually 6 choices) we wanted to use, pressed the submit button, and
-        then after a little while of watching live JSON output, we'd get to see
-        a conversation between a user and their AI agent along with our injected
-        text somewhere in the results of a tool call. Again, you'll see what I
-        mean throughout the writeup.
+        we wanted to use (usually from a list of 6 choices), pressed the submit
+        button, and then after a little while of watching live JSON output, we'd
+        get to see a conversation between a user and their AI agent along with
+        our injected text somewhere in the results of a tool call. Again, you'll
+        see what I mean throughout the writeup.
       </Body>
       <Body>
         Scoring worked as follows: for a successful injection on a task, you

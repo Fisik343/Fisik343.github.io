@@ -46,6 +46,7 @@ function MATSxTrails() {
       </Body>
       <Body># Shortest Prompts: 15 (out of 27)</Body>
       <Body>Prize: $3,350 (USD)</Body>
+      <Body>Last edited: 28 October 2025</Body>
       <SubHeader>Table of Contents</SubHeader>
       <Grid container columnSpacing={2}>
         <Grid size={{ xs: 12, md: 4 }}>

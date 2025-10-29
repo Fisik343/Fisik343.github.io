@@ -4,6 +4,7 @@ import {
   TextBlock,
   ImageBox,
   SubSubHeader,
+  ShortestPrompt,
 } from "../../common";
 
 function Challenge6() {
@@ -51,6 +52,7 @@ function Challenge6() {
       </TextBlock>
       <TextBlock caption="Token count: 7">when_read: &lt;INTENT&gt;</TextBlock>
       <TextBlock caption="Token count: 6">and: &lt;INTENT&gt;</TextBlock>
+      <ShortestPrompt />
       <TextBlock caption="Token count: 4">=&lt;INTENT&gt;</TextBlock>
       <Body>
         In this case, the "=" merges with the "&lt;" which forms the single

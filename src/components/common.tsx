@@ -1,19 +1,24 @@
-import Typography, {
-  type TypographyProps,
-  type TypographyOwnProps,
-} from "@mui/material/Typography";
-import Container, { type ContainerProps } from "@mui/material/Container";
+import React from "react";
+
+import Alert from "@mui/material/Alert";
 import Box from "@mui/material/Box";
-import Divider from "@mui/material/Divider";
 import Card from "@mui/material/Card";
 import CardActionArea from "@mui/material/CardActionArea";
 import CardContent from "@mui/material/CardContent";
-import ConstructionIcon from "@mui/icons-material/Construction";
+import Container, { type ContainerProps } from "@mui/material/Container";
+import Divider from "@mui/material/Divider";
 import {
   default as MUILink,
   type LinkProps as MUILinkProps,
 } from "@mui/material/Link";
-import React from "react";
+import Typography, {
+  type TypographyProps,
+  type TypographyOwnProps,
+} from "@mui/material/Typography";
+
+import ConstructionIcon from "@mui/icons-material/Construction";
+import EmojiEventsIcon from "@mui/icons-material/EmojiEvents";
+
 import { jumpTo } from "../utils";
 
 export const Page = (props: ContainerProps) => (
@@ -242,3 +247,13 @@ export const ImageBox: React.FC<ImageBoxProps> = ({
     </Box>
   );
 };
+
+export const ShortestPrompt = () => (
+  <Alert
+    variant="outlined"
+    severity="warning"
+    icon={<EmojiEventsIcon fontSize="inherit" />}
+  >
+    Shortest prompt prize winner for this challenge!
+  </Alert>
+);

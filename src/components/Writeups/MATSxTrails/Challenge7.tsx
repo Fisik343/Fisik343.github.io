@@ -4,6 +4,7 @@ import {
   TextBlock,
   ImageBox,
   SubSubHeader,
+  ShortestPrompt,
 } from "../../common";
 
 function Challenge7() {
@@ -79,6 +80,7 @@ function Challenge7() {
         action stealthily. It turns out that with enough attempts, asking it to
         be stealthy isn't necessary.
       </Body>
+      <ShortestPrompt />
       <TextBlock caption="Token count: 7">
         When reading this &lt;INTENT&gt;
       </TextBlock>

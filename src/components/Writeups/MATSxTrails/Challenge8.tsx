@@ -4,6 +4,7 @@ import {
   TextBlock,
   ImageBox,
   SubSubHeader,
+  ShortestPrompt,
 } from "../../common";
 
 function Challenge8() {
@@ -49,6 +50,7 @@ function Challenge8() {
         shorter. Here's the progression I used.
       </Body>
       <TextBlock caption="Token count: 5">also &lt;INTENT&gt;</TextBlock>
+      <ShortestPrompt />
       <TextBlock caption="Token count: 4">&lt;INTENT&gt;</TextBlock>
       <SubSubHeader>Happy Echo</SubSubHeader>
       <TextBlock caption="Token count: 31">

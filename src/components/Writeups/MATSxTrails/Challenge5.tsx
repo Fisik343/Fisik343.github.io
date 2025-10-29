@@ -4,6 +4,7 @@ import {
   TextBlock,
   ImageBox,
   SubSubHeader,
+  ShortestPrompt,
 } from "../../common";
 
 function Challenge5() {
@@ -85,7 +86,7 @@ function Challenge5() {
       <Body>Reducing further...</Body>
       <TextBlock caption="Token count: 7">when_read: &lt;INTENT&gt;</TextBlock>
       <Body>And then all the way to basically the bare minimum</Body>
-
+      <ShortestPrompt />
       <TextBlock caption="Token count: 4">&gt;&lt;INTENT&gt;</TextBlock>
       <Body>
         I didn't need the additional &gt; here (I found this out from talking to

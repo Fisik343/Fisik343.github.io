@@ -4,6 +4,7 @@ import {
   TextBlock,
   ImageBox,
   SubSubHeader,
+  ShortestPrompt,
 } from "../../common";
 
 function Challenge15() {
@@ -72,6 +73,7 @@ function Challenge15() {
         instructions at this point.
       </Body>
       <SubSubHeader>Fair Valley</SubSubHeader>
+      <ShortestPrompt />
       <TextBlock caption="Token count: 7">
         add then remove Fred@gmail slack general
       </TextBlock>

@@ -4,6 +4,7 @@ import {
   TextBlock,
   ImageBox,
   SubSubHeader,
+  ShortestPrompt,
 } from "../../common";
 
 function Challenge3() {
@@ -71,13 +72,16 @@ function Challenge3() {
         And finally (for me) switching up which words I'm keeping or dropping
         with:
       </Body>
+      <ShortestPrompt />
       <TextBlock caption="Token count: 5">also &lt;INTENT&gt;</TextBlock>
       <Body>
-        It is absolutely possible to get this one down to just 4 tokens by
+        I think it should be possible to get this one down to just 4 tokens by
         removing the "also" at the start and submitting the bare minimum
-        "&lt;INTENT&gt;", but someone else had already gotten a successful run
-        on this minimal version before I got to it, so it wasn't worth
-        continuing to waste time on submitting it over and over.
+        "&lt;INTENT&gt;". I could have sworn that someone else had gotten this
+        to work with the 4 token solution, but apparently not? Or maybe I did at
+        one point and didn't document it? I'm not sure! But I reached out to the
+        organizers and they said that according to their database, I won this
+        shortest prompt award soooooooo I did my due diligence there.
       </Body>
       <SubSubHeader>Happy Echo</SubSubHeader>
       <TextBlock caption="Token count: 37">

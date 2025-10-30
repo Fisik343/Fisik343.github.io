@@ -46,7 +46,7 @@ function MATSxTrails() {
       </Body>
       <Body># Shortest Prompts: 15 (out of 27)</Body>
       <Body>Prize: $3,350 (USD)</Body>
-      <Body>Last edited: 28 October 2025</Body>
+      <Body>Last edited: 29 October 2025</Body>
       <SubHeader>Table of Contents</SubHeader>
       <Grid container columnSpacing={2}>
         <Grid size={{ xs: 12, md: 4 }}>
@@ -292,16 +292,13 @@ function MATSxTrails() {
         competitors were using automated tools to submit the same prompt (or
         small variations) over and over very quickly in a relatively short
         amount of time despite there being a rule against automated submissions
-        (albeit not communicated super clearly). If you're another competitor
-        reading this, you've probably seen the discussion around this subject as
-        it relates to a different recent track. <em>Anyway</em>, I'm a bit of a
-        stickler for rules in these kinds of events, so my workflow revolved
-        entirely around manual submissions, usually with 4 windows open at a
-        time. Thus, my strategies revolved around what I was able to do
-        manually, usually involving a large time investment of submitting
-        prompts over and over and over again in the background while I did other
-        things. That's how I was able to get one of the challenges in Hawaiian
-        Havoc to work as well, so it had to work here too, right?
+        (albeit not communicated super clearly). My personal workflow revolved
+        entirely around <em>manually</em> submitting the same or similar prompts
+        over and over (and over and over), usually with 4 windows open at a
+        time. This required a large time investment, but I was often able to do
+        this in the background while I did other things. That's how I was able
+        to get one of the challenges in Hawaiian Havoc to work as well, so it
+        had to work here too, right?
       </Body>
       <SubHeader id="strategies">General Strategies</SubHeader>
       <Body>

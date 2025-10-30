@@ -287,19 +287,6 @@ function MATSxTrails() {
         using to their minimum). That next event happened to be MATS x Trails,
         so you'll see a bit of discussion of shortening prompts in this writeup.
       </Body>
-      <Body>
-        I have some moderately strong feelings about the fact that some
-        competitors were using automated tools to submit the same prompt (or
-        small variations) over and over very quickly in a relatively short
-        amount of time despite there being a rule against automated submissions
-        (albeit not communicated super clearly). My personal workflow revolved
-        entirely around <em>manually</em> submitting the same or similar prompts
-        over and over (and over and over), usually with 4 windows open at a
-        time. This required a large time investment, but I was often able to do
-        this in the background while I did other things. That's how I was able
-        to get one of the challenges in Hawaiian Havoc to work as well, so it
-        had to work here too, right?
-      </Body>
       <SubHeader id="strategies">General Strategies</SubHeader>
       <Body>
         One of the first things I tried to do was figure out which models would

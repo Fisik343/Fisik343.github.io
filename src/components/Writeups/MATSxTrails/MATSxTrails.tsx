@@ -1,5 +1,4 @@
-import { Alert } from "@mui/material";
-import Grid from "@mui/material/Grid";
+import { Alert, Grid } from "@mui/material";
 import {
   Body,
   Header,

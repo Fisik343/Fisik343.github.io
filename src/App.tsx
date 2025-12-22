@@ -4,7 +4,7 @@ import { Home } from "./components/Home";
 import { Error } from "./components/Error";
 import { Timeline } from "./components/Timeline";
 import { Sandbox } from "./components/Sandbox";
-import { Writeups, MATSxTrails } from "./components/Writeups";
+import { Writeups, MATSxTrails, AdventOfCode2025 } from "./components/Writeups";
 import { FAQs } from "./components/FAQs";
 import { useEffect } from "react";
 
@@ -28,6 +28,7 @@ function App() {
         <Route path="writeups">
           <Route path="" element={<Writeups />} />
           <Route path="mats-x-trails" element={<MATSxTrails />} />
+          <Route path="advent-of-code-2025" element={<AdventOfCode2025 />} />
         </Route>
         <Route path="faqs" element={<FAQs />} />
         <Route path="*" element={<Error />} />

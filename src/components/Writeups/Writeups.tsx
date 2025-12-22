@@ -23,6 +23,11 @@ function Writeups() {
           title="MATS x Trails"
           body="A HackAPrompt agentic AI red-teaming competition"
         />
+        <LinkCard
+          link="/#/writeups/advent-of-code-2025"
+          title="Advent of Code 2025"
+          body="A yearly programming challenge"
+        />
       </CardBox>
     </Page>
   );

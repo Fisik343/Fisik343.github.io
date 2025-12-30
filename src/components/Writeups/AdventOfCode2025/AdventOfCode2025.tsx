@@ -286,7 +286,7 @@ function AdventOfCode2025() {
         We need to get the sum of each of these vertically stacked problems. For
         now, we ignore the right vs. left alignment and just solve the addition
         and multiplication problems. It really just is just pulling out the
-        problems and then doing additon or multiplication as needed. It's just
+        problems and then doing addition or multiplication as needed. It's just
         nested for-loops. The actual problems are variable-width, so the bulk of
         the code ends up being string processing. I just scanned all the rows at
         once and if the value at the same index in every column was a space, I

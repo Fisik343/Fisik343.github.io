@@ -234,6 +234,7 @@ export const ImageBox: React.FC<ImageBoxProps> = ({
           <Box
             component="img"
             src={img}
+            loading="lazy"
             sx={{
               flex: 1,
               minWidth: "320px",

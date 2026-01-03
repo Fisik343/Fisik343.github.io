@@ -622,7 +622,7 @@ function AdventOfCode2025() {
         success check which would see if a packing is possible if each shape
         took up the full 3 by 3 space. Basically, the check would take the grid
         size, do integer division of each dimension by 3, multiply the divided
-        dimension, and then see if the number of shapes requested to fit in the
+        dimensions, and then see if the number of shapes requested to fit in the
         grid is less than the number of 3 by 3 spaces available on the grid. But
         it ended up not being needed so I didn't revise the code.
       </Body>

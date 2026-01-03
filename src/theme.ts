@@ -34,13 +34,6 @@ const initialTheme = createTheme({
 });
 
 const theme = createTheme(initialTheme, {
-  palette: {
-    white: initialTheme.palette.augmentColor({
-      color: {
-        main: "#ffffff",
-      },
-    }),
-  },
   typography: {
     body1: {
       fontSize: "1.125rem",

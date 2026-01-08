@@ -213,7 +213,60 @@ const timelineData = [
     ),
   },
   {
+    title: "Visual Servoing (Face Tracking)",
+    date: "February 2023",
+    body: (
+      <Body>
+        Wrote code in Python which used OpenCV and{" "}
+        <Link href="https://en.wikipedia.org/wiki/Proportional%E2%80%93integral%E2%80%93derivative_controller">
+          PID controllers
+        </Link>{" "}
+        to implement real-time face tracking on a robot, constantly centering
+        detected faces in frame. Specifically, used a Hiwonder TonyPi humanoid
+        robot which has 2 degrees of freedom for its head where the camera is
+        located. Code is structured around the multithreaded face detection{" "}
+        <Link scrollTarget="cv-demos">computer vision demo</Link> I previously
+        wrote. Adapted this into a project for students to complete as part of a{" "}
+        <Link href="https://sites.psu.edu/lpac/courses/">
+          humanoid robotics course
+        </Link>{" "}
+        and guided students through its completion. A video demonstration of
+        students' project results can be found{" "}
+        <Link href="https://www.youtube.com/watch?v=ISE_9dWH1ug">here</Link>.
+      </Body>
+    ),
+    bodyVerbose: (
+      <Body>
+        Having a robot stare at you as you walk through a room is kind of
+        creepy. I'd know because I implemented this kind of face tracking or
+        visual servoing using Python, OpenCV, and PID controllers. Starting with
+        the multithreaded face detection{" "}
+        <Link scrollTarget="cv-demos">computer vision demo</Link> I previously
+        wrote, I adapted it to run smoothly on a Hiwonder TonyPi robot. After
+        that, I implemented and tuned a{" "}
+        <Link href="https://en.wikipedia.org/wiki/Proportional%E2%80%93integral%E2%80%93derivative_controller">
+          PID controller
+        </Link>{" "}
+        for each axis of the robot's head servos to keep the largest detected
+        face centered in the frame. With the limited hardware available on the
+        robot, I had to tweak face detection speed and accuracy to ensure I was
+        capturing data often enough for the PID controllers to work well, and
+        each time I changed the face detection parameters I had to retune my PID
+        controllers. A few attempts at getting decent parameters later, and I
+        had a working visual servoing example. With this implemented, I turned
+        it into a project for students to complete as part of a{" "}
+        <Link href="https://sites.psu.edu/lpac/courses/">
+          humanoid robotics course
+        </Link>{" "}
+        and guided them through their own implementations. A video demonstration
+        of students' project results can be found{" "}
+        <Link href="https://www.youtube.com/watch?v=ISE_9dWH1ug">here</Link>.
+      </Body>
+    ),
+  },
+  {
     title: "Computer Vision Demos",
+    id: "cv-demos",
     date: "January 2023, May 2025",
     body: (
       <Body>
@@ -249,6 +302,64 @@ const timelineData = [
         now, you can put whatever you want there). In 2025 I added face landmark
         localization to the single-threaded version to round out the demos a bit
         more.
+      </Body>
+    ),
+  },
+  {
+    title: "Humanoid Robot Motion Tasks",
+    date: "January 2023",
+    body: (
+      <Body>
+        Wrote tools in Python for creating and executing motions on a humanoid
+        robot. Collected servo and{" "}
+        <Link href="https://en.wikipedia.org/wiki/Inertial_measurement_unit">
+          IMU
+        </Link>{" "}
+        data during robot motion for downstream stability analysis (which I also
+        wrote utilities for in Python). Guided students through using these
+        tools to study kinematics and dynamics of humanoid robots as part of a
+        course I developed in conjunction with professors. Personally designed
+        motion(s) for every task option available to students. Course info{" "}
+        <Link href="https://sites.psu.edu/lpac/courses/">here</Link>. There are
+        also videos of the first iteration of{" "}
+        <Link href="https://www.youtube.com/watch?v=84eetvk1wxc">
+          student designed motions
+        </Link>{" "}
+        and an example of the robot{" "}
+        <Link href="https://www.youtube.com/watch?v=UjpcvM3ZQbw">
+          walking up stairs
+        </Link>
+        .
+      </Body>
+    ),
+    bodyVerbose: (
+      <Body>
+        Making a humanoid robot move without falling over and injuring itself is
+        tricky. But I used Python to build some tools to make that process a bit
+        easier. I wrote tools in Python that allowed me to create, edit, and run
+        motions for a Hiwonder TonyPi humanoid robot. The simplest workflow was
+        to essentially capture keyframes and timings to define a motion and then
+        splice those together as needed. During execution of the motions, I
+        collected data from the onboard{" "}
+        <Link href="https://en.wikipedia.org/wiki/Inertial_measurement_unit">
+          IMU
+        </Link>{" "}
+        (MPU-6050). The data was then used for downstream stability analysis.
+        This work was done in support of a course on humanoid robotics I put
+        together with professors (
+        <Link href="https://sites.psu.edu/lpac/courses/">info here</Link>). For
+        a project, students chose three tasks from a list and designed
+        corresponding motions using the tools I wrote. The list included
+        stacking cubes, tossing a ball into a container, walking at various
+        speeds, stepping over hurdles, sitting down and standing back up,
+        dancing, performing exercises, and climbing stairs. Here's a{" "}
+        <Link href="https://www.youtube.com/watch?v=84eetvk1wxc">video</Link>{" "}
+        showing the students' work in the initial course offering. The only task
+        they weren't able to complete was climbing stairs, and there's a demo
+        video of that{" "}
+        <Link href="https://www.youtube.com/watch?v=UjpcvM3ZQbw">here</Link>. I
+        completed all tasks that I asked of the students to verify that they
+        were all possible.
       </Body>
     ),
   },
@@ -555,6 +666,67 @@ const timelineData = [
     ),
   },
   {
+    title: "Humanoid Robot Sim2Real with Stability Analysis",
+    date: "Spring 2021, Spring 2023",
+    body: (
+      <Body>
+        Wrote code for transferring simulated motions from a Webots{" "}
+        <Link scrollTarget="humanoid-robot-sim">simulation</Link> of a UBTECH
+        Yanshee humanoid robot to a real robot. Simulation code was in C, robot
+        and transfer code were in Python. Performed side-by-side comparison of
+        simulated and real robot behavior for a variety of motions. In a later
+        iteration, added stability analysis and visualization tools that used
+        data collected from simulated robot. This was all used as the basis for
+        a course project where students designed dances for the simulated robot
+        to perform and then I would run them on the real robot to see how they
+        performed. Course info is{" "}
+        <Link href="https://sites.psu.edu/lpac/courses/">here</Link>, initial
+        iteration is the last project in this{" "}
+        <Link href="https://www.youtube.com/watch?v=_ZtoF3oPsLc">
+          project highlights video
+        </Link>
+        , and version with stability analysis is demoed in{" "}
+        <Link href="https://www.youtube.com/watch?v=yOiAllF7Lj0">
+          this video
+        </Link>
+        .
+      </Body>
+    ),
+    bodyVerbose: (
+      <Body>
+        I previously made{" "}
+        <Link scrollTarget="humanoid-robot-sim">simulations</Link> of a UBTECH
+        Yanshee humanoid robot. Now I needed to take robot movements from the
+        simulator and port them over to the real robot that I had access to. The
+        simulation code was in C, and the actual robot was programmable with
+        Python, and the motion file types needed for the simulator weren't
+        exactly compatible with what the robot was expecting. So I just wrote a
+        simple utility in Python that converted motion files from the
+        simulator's format to something that I could iterate through and execute
+        movement commands with on the robot. Nothing too terribly fancy there.
+        This sim2real setup was used as the basis for a project I put together
+        for students to complete as part of a{" "}
+        <Link href="https://sites.psu.edu/lpac/courses/">
+          humanoid robotics course
+        </Link>{" "}
+        that I helped to design and teach. Students designed dances for the
+        robot and then I transferred them to the real robot to see how far the
+        real robot's performance deviated from the simulated one. A video of the
+        first iteration of sim2real dances is shown as the last project in this{" "}
+        <Link href="https://www.youtube.com/watch?v=_ZtoF3oPsLc">
+          project highlights video
+        </Link>
+        . In a later version, I added stability analysis and visualization tools
+        written in Python that used foot pressure and center of mass data from
+        the simulated robot. The version with stability analysis is demoed in{" "}
+        <Link href="https://www.youtube.com/watch?v=yOiAllF7Lj0">
+          this video
+        </Link>
+        .
+      </Body>
+    ),
+  },
+  {
     title: "Head Mesh Comparison",
     date: "Spring 2021",
     body: (
@@ -625,6 +797,52 @@ const timelineData = [
         lost during preemption. I then put together some test/debug data to
         benchmark the different algorithms against each other in different
         circumstances.
+      </Body>
+    ),
+  },
+  {
+    title: "Humanoid Robot Modeling and Simulation",
+    id: "humanoid-robot-sim",
+    date: "Summer 2020",
+    body: (
+      <Body>
+        Used Blender and Webots to model and simulate a UBTECH Yanshee robot.
+        Wrote simulation controller in C to collect servo, camera, foot
+        pressure, and center of mass information. Additionally included a socket
+        server for connectivity with external programs. This simulation was used
+        as the primary basis for many of the projects and labs for a course on
+        humanoid robot simulation that I helped to put together and teach in
+        Spring 2021. Course info{" "}
+        <Link href="https://sites.psu.edu/lpac/courses/">here</Link>, project
+        highlights video{" "}
+        <Link href="https://www.youtube.com/watch?v=_ZtoF3oPsLc">here</Link>.
+      </Body>
+    ),
+    bodyVerbose: (
+      <Body>
+        In Summer 2020, the world was shut down, and my internship was cancelled
+        due to the pandemic. A professor that I took independent study credits
+        with in Spring 2020 offered me a summer position to continue my humanoid
+        robotics research and begin preparing materials for an upcoming course.
+        I first modeled a UBTECH Yanshee robot in Blender and used the
+        software's built-in physics tools to do an initial analysis of static
+        pose stability. UBTECH provided me with a partially built Webots
+        simulation, and I finished fleshing it out. This involved fixing some
+        geometry, setting up bounding boxes for collisions, fixing servo
+        parameters, finishing the camera setup, adding foot pressure sensors,
+        adding an ability to get center of mass information, and writing a
+        simulation controller in C to make everything run. I also added a basic
+        socket server for connectivity with external programs. These simulations
+        were used as the primary basis for most of the projects in a course on
+        humanoid robot simulation. As really the only person who knew how the
+        simulations worked, I was responsible for creating weekly labs and four
+        projects for students to complete as well as helping the professors
+        figure out which theory needed to be taught prior to or concurrently
+        with which assignments. Oh, and I also lectured a handful of times. Info
+        on the course can be found{" "}
+        <Link href="https://sites.psu.edu/lpac/courses/">here</Link>, and a
+        highlights video of the projects can be found{" "}
+        <Link href="https://www.youtube.com/watch?v=_ZtoF3oPsLc">here</Link>.
       </Body>
     ),
   },
@@ -1020,6 +1238,7 @@ function Timeline() {
           {displayData.map((item) => (
             <Box
               key={item.title}
+              id={item.id}
               sx={{
                 width: "100%",
                 display: "flex",

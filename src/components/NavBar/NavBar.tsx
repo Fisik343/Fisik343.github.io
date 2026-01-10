@@ -11,7 +11,7 @@ export default function NavBar() {
       <AppBar position="static">
         <Toolbar>
           <IconButton
-            href="/"
+            href="/#/"
             size="large"
             edge="start"
             color="inherit"

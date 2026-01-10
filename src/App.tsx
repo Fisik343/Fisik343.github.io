@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { HashRouter, Routes, Route, useLocation } from "react-router-dom";
 import { NavBar } from "./components/NavBar";
 import { Home } from "./components/Home";
@@ -6,7 +7,6 @@ import { Timeline } from "./components/Timeline";
 import { Sandbox } from "./components/Sandbox";
 import { Writeups, MATSxTrails, AdventOfCode2025 } from "./components/Writeups";
 import { FAQs } from "./components/FAQs";
-import { useEffect } from "react";
 
 function ScrollTop() {
   const { pathname } = useLocation();

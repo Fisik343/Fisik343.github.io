@@ -234,7 +234,7 @@ export const ImageBox: React.FC<ImageBoxProps> = ({
           <Box
             component="img"
             src={img}
-            loading="lazy"
+            // loading="lazy" // Need to figure out scroll workaround before reintroducing
             sx={{
               flex: 1,
               minWidth: "320px",

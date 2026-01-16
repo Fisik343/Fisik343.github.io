@@ -9,6 +9,29 @@ import SwapVertIcon from "@mui/icons-material/SwapVert";
 
 const timelineData = [
   {
+    title: "Three.js Solar System",
+    date: "January 2026",
+    body: (
+      <Body>
+        Simple solar system animation rendered using{" "}
+        <Link href="https://threejs.org/">three.js</Link>. It's my first venture
+        into using three.js and it lives in my{" "}
+        <Link href="/#/sandbox/three-solar">sandbox</Link>.
+      </Body>
+    ),
+    bodyVerbose: (
+      <Body>
+        I made a{" "}
+        <Link href="/#/sandbox/three-solar">solar system animation</Link> using{" "}
+        <Link href="https://threejs.org/">three.js</Link>! I've done web and
+        I've done 3D graphics, but before this I hadn't done 3D graphics on a
+        webpage. For my first venture into web graphics, I decided to keep it a
+        bit simple, but I plan on fleshing this out more over time as I continue
+        learning.
+      </Body>
+    ),
+  },
+  {
     title: "Advent of Code 2025",
     date: "December 2025",
     body: (

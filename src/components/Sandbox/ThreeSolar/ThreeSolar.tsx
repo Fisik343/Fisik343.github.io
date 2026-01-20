@@ -109,7 +109,7 @@ function ThreeSolar() {
     // Set up renderer
     const renderer = new WebGLRenderer({ antialias: true });
     renderer.setClearAlpha(0); // Transparent background
-    renderer.setPixelRatio(Math.min(window.devicePixelRatio * 2, 8)); // Adjust for device dpi
+    renderer.setPixelRatio(Math.min(window.devicePixelRatio * 2, 3)); // Adjust for device dpi
     // renderer.shadowMap.enabled = true;
     // renderer.shadowMap.type = PCFSoftShadowMap;
 

@@ -9,7 +9,7 @@ import {
   Material,
   Mesh,
   MeshStandardMaterial,
-  PCFSoftShadowMap,
+  // PCFSoftShadowMap,
   PerspectiveCamera,
   PointLight,
   RingGeometry,
@@ -20,6 +20,7 @@ import {
 } from "three";
 import { EffectComposer, RenderPass } from "three/addons";
 import { FXAAPass } from "three/addons/postprocessing/FXAAPass.js";
+import { OrbitControls } from "three/addons/controls/OrbitControls.js";
 
 const ASPECT = 4 / 3;
 const ORBIT_RES = 128;
@@ -109,8 +110,8 @@ function ThreeSolar() {
     const renderer = new WebGLRenderer({ antialias: true });
     renderer.setClearAlpha(0); // Transparent background
     renderer.setPixelRatio(Math.min(window.devicePixelRatio * 2, 3)); // Adjust for device dpi
-    renderer.shadowMap.enabled = true;
-    renderer.shadowMap.type = PCFSoftShadowMap;
+    // renderer.shadowMap.enabled = true;
+    // renderer.shadowMap.type = PCFSoftShadowMap;
 
     // Attach renderer to DOM
     if (!currentContainer.children.length) {
@@ -121,6 +122,13 @@ function ThreeSolar() {
     const camera = new PerspectiveCamera(80, ASPECT, 0.1, 1000);
     camera.position.set(30, 60, 0);
     camera.lookAt(0, 0, 0);
+
+    // Set up camera controls
+    const controls = new OrbitControls(camera, renderer.domElement);
+    controls.maxDistance = 120;
+    controls.minDistance = 4;
+    controls.enableDamping = true;
+    controls.update();
 
     // Set up camera/canvas reset logic
     const resetView = () => {
@@ -154,7 +162,7 @@ function ThreeSolar() {
     // Planets
     const planets: Array<Planet> = [];
     for (const planetDef of planetDefs) {
-      const geo = new SphereGeometry(planetDef.radius);
+      const geo = new SphereGeometry(planetDef.radius, 64, 32);
       const mat = new MeshStandardMaterial({
         color: planetDef.color,
         roughness: 0.8,
@@ -167,8 +175,8 @@ function ThreeSolar() {
         theta: Math.random() * 2 * Math.PI,
       };
       mesh.position.copy(getPlanetPosition(planet));
-      mesh.castShadow = true;
-      mesh.receiveShadow = true;
+      // mesh.castShadow = true;
+      // mesh.receiveShadow = true;
       planets.push(planet);
       scene.add(mesh);
     }
@@ -193,14 +201,14 @@ function ThreeSolar() {
     }
 
     // Sun
-    const sunGeo = new SphereGeometry(3.2);
+    const sunGeo = new SphereGeometry(3.2, 128, 64);
     const sunMat = new MeshStandardMaterial({
       color: "#ffe590",
       emissive: "#ffe590",
       emissiveIntensity: 1,
     });
     const sunMesh = new Mesh(sunGeo, sunMat);
-    sunMesh.castShadow = false; // Explicitly turn off shadow casting
+    // sunMesh.castShadow = false; // Explicitly turn off shadow casting
     scene.add(sunMesh);
 
     // Add lighting
@@ -208,10 +216,27 @@ function ThreeSolar() {
     scene.add(ambLight);
 
     const sunLight = new PointLight("#fff9eb", 8, 0, 0.2);
-    sunLight.castShadow = true;
-    sunLight.shadow.camera.far = 100;
-    sunLight.shadow.mapSize.set(1024, 1024);
+    // sunLight.castShadow = true;
+    // sunLight.shadow.camera.far = 100;
+    // sunLight.shadow.mapSize.set(2048, 2048);
     scene.add(sunLight);
+
+    // TODO: Revisit faking sun casting light for less obvious point light shadows
+    // const sunLightPositions = [
+    //   { x: 0, y: 3.2, z: 0 },
+    //   { x: 0, y: 0, z: 0 },
+    //   { x: 0, y: -3.2, z: 0 },
+    // ];
+    // const sunLights: Array<PointLight> = [];
+    // for (const pos of sunLightPositions) {
+    //   const light = new PointLight("#fff9eb", 4, 0, 0.2);
+    //   light.position.set(pos.x, pos.y, pos.z);
+    //   light.castShadow = true;
+    //   light.shadow.camera.far = 100;
+    //   light.shadow.mapSize.set(1024, 1024);
+    //   sunLights.push(light);
+    //   scene.add(light);
+    // }
 
     // Handle scene animation
     let runAnimate = true;
@@ -228,6 +253,7 @@ function ThreeSolar() {
         planet.mesh.position.copy(getPlanetPosition(planet));
       }
       // renderer.render(scene, camera);
+      controls.update();
       composer.render();
     };
     animate();

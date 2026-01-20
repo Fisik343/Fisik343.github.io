@@ -5,16 +5,16 @@ import {
   AmbientLight,
   Clock,
   type ColorRepresentation,
-  LineBasicMaterial,
   Material,
   Mesh,
+  MeshBasicMaterial,
   MeshStandardMaterial,
   // PCFSoftShadowMap,
   PerspectiveCamera,
   PointLight,
-  RingGeometry,
   Scene,
   SphereGeometry,
+  TorusGeometry,
   Vector3,
   WebGLRenderer,
 } from "three";
@@ -109,7 +109,7 @@ function ThreeSolar() {
     // Set up renderer
     const renderer = new WebGLRenderer({ antialias: true });
     renderer.setClearAlpha(0); // Transparent background
-    renderer.setPixelRatio(Math.min(window.devicePixelRatio * 2, 3)); // Adjust for device dpi
+    renderer.setPixelRatio(Math.min(window.devicePixelRatio * 2, 8)); // Adjust for device dpi
     // renderer.shadowMap.enabled = true;
     // renderer.shadowMap.type = PCFSoftShadowMap;
 
@@ -119,14 +119,14 @@ function ThreeSolar() {
     }
 
     // Initial camera setup
-    const camera = new PerspectiveCamera(80, ASPECT, 0.1, 1000);
-    camera.position.set(30, 60, 0);
+    const camera = new PerspectiveCamera(70, ASPECT, 0.1, 1000);
+    camera.position.set(33, 66, 0);
     camera.lookAt(0, 0, 0);
 
     // Set up camera controls
     const controls = new OrbitControls(camera, renderer.domElement);
     controls.maxDistance = 120;
-    controls.minDistance = 4;
+    controls.minDistance = 5;
     controls.enableDamping = true;
     controls.update();
 
@@ -184,15 +184,14 @@ function ThreeSolar() {
     // Orbits
     const orbits: Array<Mesh> = [];
     for (const planetDef of planetDefs) {
-      const orbitGeo = new RingGeometry(
-        planetDef.orbitRadius - 0.06,
-        planetDef.orbitRadius + 0.06,
+      const orbitGeo = new TorusGeometry(
+        planetDef.orbitRadius,
+        0.06,
+        12,
         ORBIT_RES
       );
-      const orbitMat = new LineBasicMaterial({
-        color: "#ffffff",
-        transparent: true,
-        opacity: 0.3,
+      const orbitMat = new MeshBasicMaterial({
+        color: "#888888",
       });
       const orbit = new Mesh(orbitGeo, orbitMat);
       orbit.geometry.rotateX(Math.PI / -2);

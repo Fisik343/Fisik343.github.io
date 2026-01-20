@@ -469,7 +469,7 @@ function AdventOfCode2025() {
         the search space is too large. I guess we could dynamically construct it
         and have early fails and bound it, but that sounds difficult. How about
         instead we formulate it as an{" "}
-        <Link href="integer linear programming">
+        <Link href="https://en.wikipedia.org/wiki/Integer_programming">
           integer linear programming
         </Link>{" "}
         problem.

@@ -152,6 +152,10 @@ function ThreeSolar() {
     const scene = new Scene();
     const clock = new Clock();
 
+    // Set up shared passes
+    const outPass = new OutputPass();
+    const renderPass = new RenderPass(scene, camera);
+
     // Set up bloom
     const bloomLayer = new Layers();
     bloomLayer.set(BLOOM_LAYER);
@@ -166,15 +170,10 @@ function ThreeSolar() {
       BLOOM_RADIUS,
       BLOOM_THRESH
     );
-    bloomPass.resolution.set(
-      currentContainer.clientWidth,
-      currentContainer.clientHeight
-    );
     const bloomComposer = new EffectComposer(renderer, bloomRenderTarget);
-    const bloomRenderPass = new RenderPass(scene, camera);
-    bloomComposer.addPass(bloomRenderPass);
+    bloomComposer.addPass(renderPass);
     bloomComposer.addPass(bloomPass);
-    bloomComposer.addPass(new OutputPass());
+    bloomComposer.addPass(outPass);
 
     const mixPass = new ShaderPass(
       new ShaderMaterial({
@@ -211,13 +210,12 @@ function ThreeSolar() {
       currentContainer.clientHeight,
       { type: HalfFloatType, samples: 4 }
     );
-    const renderPass = new RenderPass(scene, camera);
     const outComposer = new EffectComposer(renderer, outRenderTarget);
 
     outComposer.addPass(renderPass);
     outComposer.addPass(mixPass);
+    outComposer.addPass(outPass);
     outComposer.addPass(new FXAAPass());
-    outComposer.addPass(new OutputPass());
 
     // Build scene geometry
     // Planets
@@ -312,10 +310,6 @@ function ThreeSolar() {
       camera.updateProjectionMatrix();
 
       bloomComposer.setSize(
-        currentContainer.clientWidth,
-        currentContainer.clientHeight
-      );
-      bloomPass.resolution.set(
         currentContainer.clientWidth,
         currentContainer.clientHeight
       );

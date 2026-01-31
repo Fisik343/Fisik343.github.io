@@ -5,25 +5,42 @@ import {
   AmbientLight,
   Clock,
   type ColorRepresentation,
+  HalfFloatType,
+  Layers,
   Material,
   Mesh,
   MeshBasicMaterial,
   MeshStandardMaterial,
+  NeutralToneMapping,
+  Object3D,
   // PCFSoftShadowMap,
   PerspectiveCamera,
   PointLight,
   Scene,
+  ShaderMaterial,
   SphereGeometry,
   TorusGeometry,
+  Vector2,
   Vector3,
   WebGLRenderer,
+  WebGLRenderTarget,
 } from "three";
-import { EffectComposer, RenderPass } from "three/addons";
+import {
+  EffectComposer,
+  OutputPass,
+  RenderPass,
+  ShaderPass,
+  UnrealBloomPass,
+} from "three/addons";
 import { FXAAPass } from "three/addons/postprocessing/FXAAPass.js";
 import { OrbitControls } from "three/addons/controls/OrbitControls.js";
 
 const ASPECT = 4 / 3;
 const ORBIT_RES = 128;
+const BLOOM_LAYER = 1;
+const BLOOM_STRENGTH = 1.0;
+const BLOOM_RADIUS = 0.3;
+const BLOOM_THRESH = 0.5;
 
 type PlanetDef = {
   radius: number;
@@ -110,6 +127,7 @@ function ThreeSolar() {
     const renderer = new WebGLRenderer({ antialias: true });
     renderer.setClearAlpha(0); // Transparent background
     renderer.setPixelRatio(Math.min(window.devicePixelRatio * 2, 3)); // Adjust for device dpi
+    renderer.toneMapping = NeutralToneMapping;
     // renderer.shadowMap.enabled = true;
     // renderer.shadowMap.type = PCFSoftShadowMap;
 
@@ -130,33 +148,76 @@ function ThreeSolar() {
     controls.enableDamping = true;
     controls.update();
 
-    // Set up camera/canvas reset logic
-    const resetView = () => {
-      // Update the renderer
-      renderer.setSize(
-        currentContainer.clientWidth,
-        currentContainer.clientHeight
-      );
-      // Fix camera aspect ratio
-      camera.aspect =
-        currentContainer.clientWidth / currentContainer.clientHeight;
-      camera.updateProjectionMatrix();
-    };
-    window.addEventListener("resize", resetView);
-    // Reset the view to fit the container
-    resetView();
-
     // Initial scene setup
     const scene = new Scene();
     const clock = new Clock();
 
-    // Set up composer
-    const composer = new EffectComposer(renderer);
-    composer.addPass(new RenderPass(scene, camera));
+    // Set up bloom
+    const bloomLayer = new Layers();
+    bloomLayer.set(BLOOM_LAYER);
+    const bloomRenderTarget = new WebGLRenderTarget(
+      currentContainer.clientWidth,
+      currentContainer.clientHeight,
+      { type: HalfFloatType }
+    );
+    const bloomPass = new UnrealBloomPass(
+      new Vector2(currentContainer.clientWidth, currentContainer.clientHeight),
+      BLOOM_STRENGTH,
+      BLOOM_RADIUS,
+      BLOOM_THRESH
+    );
+    bloomPass.resolution.set(
+      currentContainer.clientWidth,
+      currentContainer.clientHeight
+    );
+    const bloomComposer = new EffectComposer(renderer, bloomRenderTarget);
+    const bloomRenderPass = new RenderPass(scene, camera);
+    bloomComposer.addPass(bloomRenderPass);
+    bloomComposer.addPass(bloomPass);
+    bloomComposer.addPass(new OutputPass());
 
-    // Set up FXAA
-    const fxaa = new FXAAPass();
-    composer.addPass(fxaa);
+    const mixPass = new ShaderPass(
+      new ShaderMaterial({
+        uniforms: {
+          baseTexture: { value: null },
+          bloomTexture: { value: bloomComposer.renderTarget2.texture },
+        },
+        vertexShader: `
+          varying vec2 vUv;
+
+			    void main() {
+				    vUv = uv;
+            gl_Position = projectionMatrix * modelViewMatrix * vec4( position, 1.0 );
+          }
+        `,
+        fragmentShader: `
+          uniform sampler2D baseTexture;
+          uniform sampler2D bloomTexture;
+          varying vec2 vUv;
+
+          void main() {
+            gl_FragColor = ( texture2D( baseTexture, vUv ) + texture2D( bloomTexture, vUv ) );
+          }
+        `,
+        defines: {},
+      }),
+      "baseTexture"
+    );
+    mixPass.needsSwap = true;
+
+    // Set up composer
+    const outRenderTarget = new WebGLRenderTarget(
+      currentContainer.clientWidth,
+      currentContainer.clientHeight,
+      { type: HalfFloatType, samples: 4 }
+    );
+    const renderPass = new RenderPass(scene, camera);
+    const outComposer = new EffectComposer(renderer, outRenderTarget);
+
+    outComposer.addPass(renderPass);
+    outComposer.addPass(mixPass);
+    outComposer.addPass(new FXAAPass());
+    outComposer.addPass(new OutputPass());
 
     // Build scene geometry
     // Planets
@@ -207,6 +268,7 @@ function ThreeSolar() {
       emissiveIntensity: 1,
     });
     const sunMesh = new Mesh(sunGeo, sunMat);
+    sunMesh.layers.enable(BLOOM_LAYER);
     // sunMesh.castShadow = false; // Explicitly turn off shadow casting
     scene.add(sunMesh);
 
@@ -237,6 +299,52 @@ function ThreeSolar() {
     //   scene.add(light);
     // }
 
+    // Set up camera/canvas reset logic
+    const resetView = () => {
+      // Update the renderer
+      renderer.setSize(
+        currentContainer.clientWidth,
+        currentContainer.clientHeight
+      );
+      // Fix camera aspect ratio
+      camera.aspect =
+        currentContainer.clientWidth / currentContainer.clientHeight;
+      camera.updateProjectionMatrix();
+
+      bloomComposer.setSize(
+        currentContainer.clientWidth,
+        currentContainer.clientHeight
+      );
+      bloomPass.resolution.set(
+        currentContainer.clientWidth,
+        currentContainer.clientHeight
+      );
+      outComposer.setSize(
+        currentContainer.clientWidth,
+        currentContainer.clientHeight
+      );
+    };
+    window.addEventListener("resize", resetView);
+    // Reset the view to fit the container
+    resetView();
+
+    const darkMaterial = new MeshBasicMaterial({ color: 0x000000 });
+    const materials: Record<string, Material> = {};
+
+    function darkenNonBloomed(obj: Object3D) {
+      if (obj instanceof Mesh && !bloomLayer.test(obj.layers)) {
+        materials[obj.uuid] = obj.material;
+        obj.material = darkMaterial;
+      }
+    }
+
+    function restoreMaterial(obj: Object3D) {
+      if (obj instanceof Mesh && materials[obj.uuid]) {
+        obj.material = materials[obj.uuid];
+        delete materials[obj.uuid];
+      }
+    }
+
     // Handle scene animation
     let runAnimate = true;
     let aniFrame = 0;
@@ -251,9 +359,12 @@ function ThreeSolar() {
           (planet.theta + delta * planet.orbitSpeed) % (2 * Math.PI);
         planet.mesh.position.copy(getPlanetPosition(planet));
       }
-      // renderer.render(scene, camera);
       controls.update();
-      composer.render();
+      scene.traverse(darkenNonBloomed);
+      bloomComposer.render();
+      scene.traverse(restoreMaterial);
+      mixPass.uniforms.bloomTexture.value = bloomComposer.renderTarget2.texture;
+      outComposer.render();
     };
     animate();
 
@@ -286,9 +397,8 @@ function ThreeSolar() {
         This was not designed for mobile &ndash; your mileage may vary if
         viewing from a mobile device.
         <br />
-        This is a first cut, next steps are to add camera controls and a
-        selective emissive bloom pass. Maybe I'll add a skybox and come up with
-        more interesting orbit patterns. Maybe moons too?
+        This is a work in progress. Maybe next I'll add a skybox and come up
+        with more interesting orbit patterns. Possibly moons too?
       </Alert>
       <Box
         sx={{
